@@ -151,136 +151,565 @@ renderTests();
     <h2 class="fw-bold text-center mb-4">Our Test Packages</h2>
     <div class="row g-4">
 
-      <!-- Package Card -->
+      <!-- Fever Profile -->
       <div class="col-md-4">
         <div class="card shadow-sm border-0 h-100">
           <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Basic Health Package</h5>
-            <p class="text-muted">Includes 10 essential tests for your core health</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#packageBasic">View Details</button>
+            <h5 class="card-title fw-bold">Fever Profile</h5>
+            <p class="text-muted">Comprehensive tests for fever and infection diagnosis</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFever">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookFever">Book Now</button>
           </div>
         </div>
       </div>
 
-      <!-- Another Package -->
+      <!-- PCOD Profile -->
       <div class="col-md-4">
         <div class="card shadow-sm border-0 h-100">
           <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Diabetes Checkup</h5>
-            <p class="text-muted">Focuses on blood sugar, HbA1c, kidney & eye health</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#packageDiabetes">View Details</button>
+            <h5 class="card-title fw-bold">PCOD Profile</h5>
+            <p class="text-muted">Hormonal assessment for PCOD management</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packagePCOD">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookPCOD">Book Now</button>
           </div>
         </div>
       </div>
 
-      <!-- Third Package -->
-      <div class="col-md-4">
+ <div class="col-md-4">
         <div class="card shadow-sm border-0 h-100">
           <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Full Body Checkup</h5>
-            <p class="text-muted">Complete panel of 25+ tests to assess all systems</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#packageFullBody">View Details</button>
+            <h5 class="card-title fw-bold">Arthritis Basic Screen</h5>
+            <p class="text-muted">Key markers for arthritis diagnosis</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageArthritis">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookArthritis">Book Now</button>
           </div>
         </div>
       </div>
+
+      <!-- Comprehensive Full Body Checkup -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Full Body Checkup (81 Tests)</h5>
+            <p class="text-muted">Extensive assessment of all health parameters</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFullBody">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookFullBody">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diabetes Package -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Diabetes Package</h5>
+            <p class="text-muted">Essential diabetes monitoring tests</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageDiabetes">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDiabetes">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Basic Package -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Basic Package</h5>
+            <p class="text-muted">43 tests for primary health screening</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageBasic">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookBasic">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fitness Profile -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Fitness Profile</h5>
+            <p class="text-muted">Complete wellness and fitness assessment</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFitness">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookFitness">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANC Premium -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">ANC Premium</h5>
+            <p class="text-muted">Special tests for antenatal care</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageANC">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookANC">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Male Infertility Basic Screen -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Male Infertility Screen</h5>
+            <p class="text-muted">Key hormones & indices for fertility</p>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageMaleInfertility">View Details</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookMaleInfertility">Book Now</button>
+          </div>
+        </div>
+      </div>
+
 
     </div>
   </div>
 </section>
 
-
-<!-- Basic Health Package Modal -->
-<div class="modal fade" id="packageBasic" tabindex="-1">
+<!-- Fever Profile Modal -->
+<div class="modal fade" id="packageFever" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content border-0">
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Basic Health Package</h5>
+        <h5 class="modal-title">Fever Profile</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p><strong>Total Tests:</strong> 10</p>
         <ul>
-          <li>CBC</li>
-          <li>LFT</li>
-          <li>KFT</li>
-          <li>Fasting Blood Sugar</li>
-          <li>Thyroid Profile</li>
-          <li>Lipid Profile</li>
-          <li>Vitamin D</li>
-          <li>Vitamin B12</li>
-          <li>Urine Routine</li>
-          <li>Blood Group</li>
+          <li>Liver Function Test</li>
+          <li>C-Reactive Protein</li>
+          <li>Widal Slide Test</li>
+          <li>Dengue Profile</li>
+          <li>CBC With ESR</li>
+          <li>Malaria Antigen (PV/PF)</li>
         </ul>
-        <p><strong>Total Price:</strong> <span class="text-success fw-bold">₹999</span></p>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹1799 (MRP ₹3500)</span></p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Diabetes Package Modal -->
-<div class="modal fade" id="packageDiabetes" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Diabetes Checkup</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Total Tests:</strong> 8</p>
-        <ul>
-          <li>Fasting Blood Sugar</li>
-          <li>Post Prandial Blood Sugar</li>
-          <li>HbA1c</li>
-          <li>Urine Routine</li>
-          <li>Creatinine</li>
-          <li>Microalbumin</li>
-          <li>Lipid Profile</li>
-          <li>Vitamin B12</li>
-        </ul>
-        <p><strong>Total Price:</strong> <span class="text-success fw-bold">₹799</span></p>
+<div class="modal fade" id="bookFever" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Fever Profile</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - Fever Profile">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Full Body Checkup Modal -->
+<!-- PCOD Profile Modal -->
+<div class="modal fade" id="packagePCOD" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">PCOD Profile</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Serum Testosterone</li>
+          <li>DHEAS</li>
+          <li>Serum Insulin - Fasting</li>
+          <li>Estradiol / Estrogen</li>
+          <li>Progesterone</li>
+          <li>Prolactin - Serum</li>
+          <li>FSH</li>
+          <li>LH</li>
+          <li>Thyroid Function Test</li>
+        </ul>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹3500</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="bookFever" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Fever Profile</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - PCOD Profile">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full Body View Details -->
 <div class="modal fade" id="packageFullBody" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content border-0">
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Full Body Checkup</h5>
+        <h5 class="modal-title">Comprehensive Full Body Checkup (81 Tests)</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p><strong>Total Tests:</strong> 25</p>
         <ul>
-          <li>CBC</li>
           <li>LFT</li>
           <li>KFT</li>
           <li>Lipid Profile</li>
           <li>Thyroid Profile</li>
-          <li>Blood Sugar (F + PP)</li>
-          <li>HbA1c</li>
-          <li>Urine Routine</li>
-          <li>Iron Studies</li>
-          <li>Vitamin D & B12</li>
-          <li>ESR</li>
+          <li>CBC</li>
+          <li>Urine Analysis</li>
+          <li>HBA1C</li>
+          <li>Iron Profile</li>
+          <li>Vitamin B12</li>
+          <li>Vitamin D</li>
+          <li>Ferritin</li>
           <li>Calcium</li>
-          <li>CRP</li>
-          <li>Electrolytes</li>
-          <li>HIV 1 & 2</li>
         </ul>
-        <p><strong>Total Price:</strong> <span class="text-success fw-bold">₹1499</span></p>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹2799 (MRP ₹5999)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full Body Book Now -->
+<div class="modal fade" id="bookFullBody" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Comprehensive Full Body Checkup</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width:800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - Comprehensive Full Body Checkup">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
 
+<!-- Diabetes View Details -->
+<div class="modal fade" id="packageDiabetes" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Diabetes Package (51 Tests)</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>LFT</li>
+          <li>KFT</li>
+          <li>Lipid Profile</li>
+          <li>Thyroid Profile</li>
+          <li>CBC</li>
+          <li>Calcium</li>
+          <li>HBA1C</li>
+          <li>Iron Profile</li>
+        </ul>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹1699 (MRP ₹3199)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Diabetes Book Now -->
+<div class="modal fade" id="bookDiabetes" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Diabetes Package</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width:800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - Diabetes Package">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- Basic Package View Details -->
+<div class="modal fade" id="packageBasic" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Basic Package (43 Tests)</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>LFT</li>
+          <li>KFT</li>
+          <li>Lipid Profile</li>
+          <li>Thyroid Profile</li>
+          <li>CBC</li>
+          <li>Calcium</li>
+          <li>Sugar</li>
+        </ul>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹1399 (MRP ₹2550)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Basic Package Book Now -->
+<div class="modal fade" id="bookBasic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Basic Package</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width:800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - Basic Package">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- Fitness Profile View Details -->
+<div class="modal fade" id="packageFitness" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Fitness Profile</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Complete Blood Count</li>
+          <li>ESR</li>
+          <li>EGFR</li>
+          <li>Liver Function Test</li>
+          <li>Kidney Function Test</li>
+          <li>Thyroid Function Test</li>
+          <li>T3, T4, TSH</li>
+          <li>Lipid Profile</li>
+          <li>Iron Studies</li>
+          <li>HBA1C / GLY</li>
+          <li>Vitamin B12</li>
+          <li>Vitamin D Total</li>
+          <li>Serum Testosterone</li>
+          <li>Amylase, Lipase</li>
+          <li>Blood Sugar Fasting</li>
+          <li>Urine Routine</li>
+          <li>Rheumatoid Factor</li>
+          <li>HS-CRP</li>
+          <li>Apolipoprotein A1 & B</li>
+          <li>Apo B/A1 Ratio</li>
+        </ul>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹5499 (MRP ₹11,000)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fitness Profile Book Now -->
+<div class="modal fade" id="bookFitness" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Fitness Profile</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width:800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - Fitness Profile">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ANC Premium View Details -->
+<div class="modal fade" id="packageANC" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">ANC Premium</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Blood Sugar - Random</li>
+          <li>Sickling Test</li>
+          <li>TSH</li>
+          <li>Syphilis Test</li>
+          <li>Hepatitis B Antigen</li>
+          <li>HIV Rapid Screening</li>
+          <li>Urine Routine</li>
+          <li>Blood Group & RH Factor</li>
+          <li>Complete Blood Count</li>
+        </ul>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹1399 (MRP ₹2100)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ANC Premium Book Now -->
+<div class="modal fade" id="bookANC" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book ANC Premium</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width:800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - ANC Premium">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Male Infertility View Details -->
+<div class="modal fade" id="packageMaleInfertility" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Male Infertility Basic Screen</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>FSH</li>
+          <li>LH</li>
+          <li>Prolactin</li>
+          <li>SHBG</li>
+          <li>Total Testosterone</li>
+          <li>Free Androgen Index</li>
+        </ul>
+        <p><strong>Price:</strong> <span class="text-success fw-bold">₹2899 (MRP ₹4900)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Male Infertility Book Now -->
+<div class="modal fade" id="bookMaleInfertility" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 border-0">
+      <h5 class="text-center fw-bold mb-3">Book Male Infertility Basic Screen</h5>
+      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width:800px;">
+        <form>
+          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+          <input type="hidden" name="subject" value="Appointment Request - Male Infertility Basic Screen">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Any message or instructions" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <!-- Footer -->
