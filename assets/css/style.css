@@ -1,0 +1,292 @@
+/* ----------------------- */
+/* 🎯 1. NAVBAR SECTION    */
+/* ----------------------- */
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+/* 🌐 Smooth scrolling for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+}
+
+.glass-navbar {
+  background-color: rgba(13, 110, 253, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+/* ----------------------- */
+/* 🎯 2. HOMEPAGE SECTION  */
+/* ----------------------- */
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../images/hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 140px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.test-section {
+  padding: 60px 0;
+}
+
+.test-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.test-list li {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.test-list li:hover,
+.test-list li.active {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+/* 
+.test-details {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  min-height: 220px;
+  transition: all 0.3s;
+} */
+
+/* .test-details h3 {
+  font-weight: 700;
+  color: #0d6efd;
+} */
+
+.test-details p.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌟 See More Button Styling */
+.see-more-btn {
+  background-color: #0d6efd;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.see-more-btn:hover {
+  background-color: #084298;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.4);
+}
+
+
+.sample-collection {
+  background-color: #e8f0fe;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.blog-snippets {
+  padding: 50px 0;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+
+/* ----------------------- */
+/* 🎯 3. FOOTER & EXTRAS   */
+/* ----------------------- */
+
+.footer {
+  background-color: #343a40;
+  color: #ccc;
+  padding: 40px 0;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: bounce 2s infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+
+/* ----------------------- */
+/* 🎯 About Us   */
+/* ----------------------- */
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #ffdd57, #fbb034);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #2c7be5, #0056b3);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
+
+
+/* 🎬 Animation Effects */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.animate-section {
+  animation: fadeUp 1s ease-in;
+}
+
+/* 💼 Director Card Styling */
+.director-card img {
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.director-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.director-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------------------- */
+/* 🎯 Technolgy  */
+/* ----------------------- */
+
+
+/* 🚀 Technology Page Styles */
+.tech-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../images/tech-lab.jpg') no-repeat center center/cover;
+  height: 60vh;
+  color: white;
+}
+
+.tech-hero h1 {
+  animation: slideFade 1s ease-out;
+}
+
+ .img-fluid {
+      max-width: 62%;
+}
+
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

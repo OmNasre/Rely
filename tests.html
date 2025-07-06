@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tests | Rely Path Lab</title>
+
+  <!-- Bootstrap + FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+  <!-- Your Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/test-fliter.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ✅ NAVBAR (same as your existing) -->
+   <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3 text-white d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.jpg" alt="Rely Path Lab Logo" style="height: 40px; margin-right: 10px;">
+        Rely Path Lab
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="technology.html">Technology</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="tests.html">Tests</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- 🧪 Organ Filter Section -->
+<div class="container py-4">
+  <h2 class="fw-bold text-center mb-4">Explore Tests by Organ</h2>
+
+<div class="rely-organ-filter" id="organCategories">
+  <div class="rely-organ-btn active" data-organ="All">
+    <img src="https://cdn-icons-png.flaticon.com/128/893/893257.png" alt="All">All
+  </div>
+  <div class="rely-organ-btn" data-organ="Heart">
+    <img src="https://cdn-icons-png.flaticon.com/128/3904/3904270.png" alt="Heart">Heart
+  </div>
+  <div class="rely-organ-btn" data-organ="Liver">
+    <img src="https://cdn-icons-png.flaticon.com/128/7315/7315304.png" alt="Liver">Liver
+  </div>
+  <div class="rely-organ-btn" data-organ="Kidney">
+    <img src="https://cdn-icons-png.flaticon.com/128/3460/3460131.png" alt="Kidney">Kidney
+  </div>
+  <div class="rely-organ-btn" data-organ="Thyroid">
+    <img src="https://cdn-icons-png.flaticon.com/128/10852/10852759.png" alt="Thyroid">Thyroid
+  </div>
+  <div class="rely-organ-btn" data-organ="Urine">
+    <img src="https://cdn-icons-png.flaticon.com/128/609/609803.png" alt="Urine">Urine
+  </div>
+</div>
+
+
+  <div class="row">
+    <div class="col-md-5">
+      <input type="text" class="form-control rely-test-search" placeholder="Search test..." id="testSearch">
+      <div class="rely-test-list" id="testList"></div>
+    </div>
+    <div class="col-md-7">
+      <div class="rely-test-detail" id="testDetail">
+        <h4>Select a test to view details</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ FOOTER (same as your existing) -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const testData = [
+  { name: "ECG", organ: "Heart", price: "₹500", desc: "Electrocardiogram to assess heart rhythm. Diagnoses arrhythmias, ischemia, and more. Quick and painless." },
+  { name: "2D Echo", organ: "Heart", price: "₹1200", desc: "Ultrasound to visualize heart chambers and valves. Detects structural problems." },
+  { name: "LFT", organ: "Liver", price: "₹649", desc: "Measures enzymes like ALT, AST, bilirubin. Used to assess liver health." },
+  { name: "SGOT/SGPT", organ: "Liver", price: "₹399", desc: "Detects liver inflammation. Helps track medication effects or hepatitis." },
+  { name: "KFT", organ: "Kidney", price: "₹599", desc: "Kidney profile includes urea, creatinine. Identifies renal issues early." },
+  { name: "Creatinine Test", organ: "Kidney", price: "₹299", desc: "Checks waste buildup due to kidney dysfunction." },
+  { name: "TSH", organ: "Thyroid", price: "₹349", desc: "Thyroid Stimulating Hormone to screen for thyroid problems." },
+  { name: "T3 T4 TSH", organ: "Thyroid", price: "₹599", desc: "Complete thyroid hormone evaluation. Identifies hyper/hypo function." },
+  { name: "Urine Routine", organ: "Urine", price: "₹249", desc: "Checks for protein, sugar, ketones, and crystals in urine." },
+  { name: "Microalbumin", organ: "Urine", price: "₹450", desc: "Detects early kidney damage in diabetics via protein levels." }
+];
+
+const categoryItems = document.querySelectorAll('.rely-organ-btn');
+const testListEl = document.getElementById('testList');
+const detailEl = document.getElementById('testDetail');
+const searchInput = document.getElementById('testSearch');
+
+let filteredTests = testData;
+
+function renderTests() {
+  testListEl.innerHTML = '';
+  filteredTests.forEach(test => {
+    const item = document.createElement('div');
+    item.className = 'rely-test-item';
+    item.innerText = test.name;
+    item.onclick = () => {
+      document.querySelectorAll('.rely-test-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      detailEl.innerHTML = `
+        <h4>${test.name}</h4>
+        <p class="price">${test.price}</p>
+        <p>${test.desc}</p>
+      `;
+    };
+    testListEl.appendChild(item);
+  });
+}
+
+categoryItems.forEach(btn => {
+  btn.addEventListener('click', () => {
+    categoryItems.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const organ = btn.getAttribute('data-organ');
+    filteredTests = organ === "All" ? testData : testData.filter(t => t.organ === organ);
+    renderTests();
+    detailEl.innerHTML = "<h4>Select a test to view details</h4>";
+  });
+});
+
+searchInput.addEventListener('input', () => {
+  const keyword = searchInput.value.toLowerCase();
+  const organ = document.querySelector('.rely-organ-btn.active').getAttribute('data-organ');
+  filteredTests = testData.filter(t => {
+    const matchOrgan = organ === "All" || t.organ === organ;
+    return matchOrgan && t.name.toLowerCase().includes(keyword);
+  });
+  renderTests();
+});
+
+renderTests();
+</script>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Our Test Packages</h2>
+    <div class="row g-4">
+
+      <!-- Package Card -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Basic Health Package</h5>
+            <p class="text-muted">Includes 10 essential tests for your core health</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#packageBasic">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Another Package -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Diabetes Checkup</h5>
+            <p class="text-muted">Focuses on blood sugar, HbA1c, kidney & eye health</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#packageDiabetes">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Package -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Full Body Checkup</h5>
+            <p class="text-muted">Complete panel of 25+ tests to assess all systems</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#packageFullBody">View Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Basic Health Package Modal -->
+<div class="modal fade" id="packageBasic" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Basic Health Package</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Total Tests:</strong> 10</p>
+        <ul>
+          <li>CBC</li>
+          <li>LFT</li>
+          <li>KFT</li>
+          <li>Fasting Blood Sugar</li>
+          <li>Thyroid Profile</li>
+          <li>Lipid Profile</li>
+          <li>Vitamin D</li>
+          <li>Vitamin B12</li>
+          <li>Urine Routine</li>
+          <li>Blood Group</li>
+        </ul>
+        <p><strong>Total Price:</strong> <span class="text-success fw-bold">₹999</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Diabetes Package Modal -->
+<div class="modal fade" id="packageDiabetes" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Diabetes Checkup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Total Tests:</strong> 8</p>
+        <ul>
+          <li>Fasting Blood Sugar</li>
+          <li>Post Prandial Blood Sugar</li>
+          <li>HbA1c</li>
+          <li>Urine Routine</li>
+          <li>Creatinine</li>
+          <li>Microalbumin</li>
+          <li>Lipid Profile</li>
+          <li>Vitamin B12</li>
+        </ul>
+        <p><strong>Total Price:</strong> <span class="text-success fw-bold">₹799</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full Body Checkup Modal -->
+<div class="modal fade" id="packageFullBody" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Full Body Checkup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Total Tests:</strong> 25</p>
+        <ul>
+          <li>CBC</li>
+          <li>LFT</li>
+          <li>KFT</li>
+          <li>Lipid Profile</li>
+          <li>Thyroid Profile</li>
+          <li>Blood Sugar (F + PP)</li>
+          <li>HbA1c</li>
+          <li>Urine Routine</li>
+          <li>Iron Studies</li>
+          <li>Vitamin D & B12</li>
+          <li>ESR</li>
+          <li>Calcium</li>
+          <li>CRP</li>
+          <li>Electrolytes</li>
+          <li>HIV 1 & 2</li>
+        </ul>
+        <p><strong>Total Price:</strong> <span class="text-success fw-bold">₹1499</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p>Rely Path Lab is NABL/ISO certified providing trusted pathology services with accurate reports at your doorstep.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <p><i class="fas fa-phone"></i> +91-7559258660</p>
+          <p><i class="fas fa-envelope"></i> info@relypathlab.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Nagpur, India</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
