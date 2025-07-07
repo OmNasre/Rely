@@ -80,7 +80,7 @@
       <div class="row align-items-center">
 
         <!-- Left: Image -->
-        <div class="col-md-6 mb-4 mb-md-0">
+        <div class="col-md-6 mb-4 mb-md-0 ml-5">
           <img
             src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="About Rely Path Lab" class="img-fluid rounded shadow-sm">
@@ -159,74 +159,139 @@
       </div>
 
       <!-- Home Collection Form -->
-      <div id="form-home" class="d-none" id="homebooking">
-        <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
-          <form id="homeForm">
-            <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
-            <input type="hidden" name="from_name" value="Rely Path Lab Online" />
-            <input type="hidden" name="subject" value="Home Sample Collection Request from Rely Path Lab">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-              </div>
-              <div class="col-md-6">
-                <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required
-                  pattern="[0-9]{10}">
-              </div>
-              <div class="col-12">
-                <textarea name="address" class="form-control" placeholder="Full Address with Pin Code" rows="2"
-                  required></textarea>
-              </div>
-              <div class="col-12">
-                <label><strong>Select Tests:</strong></label>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="tests[]" value="CBC" id="cbc">
-                      <label class="form-check-label" for="cbc">CBC</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="tests[]" value="Blood Sugar" id="sugar">
-                      <label class="form-check-label" for="sugar">Blood Sugar</label>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="tests[]" value="Liver Function" id="liver">
-                      <label class="form-check-label" for="liver">Liver Function</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="tests[]" value="Kidney Function"
-                        id="kidney">
-                      <label class="form-check-label" for="kidney">Kidney Function</label>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="tests[]" value="Vitamin D" id="vitd">
-                      <label class="form-check-label" for="vitd">Vitamin D</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="tests[]" value="Thyroid" id="thyroid">
-                      <label class="form-check-label" for="thyroid">Thyroid</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <textarea name="message" class="form-control" placeholder="Optional: Any instructions..."
-                  rows="3"></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-success w-100">Request Home Collection</button>
-              </div>
-              <p id="result2" class="text-center text-muted"></p>
-            </div>
-          </form>
+ <div id="form-home" class="d-none">
+  <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
+    <form id="homeForm">
+      <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809" />
+      <input type="hidden" name="from_name" value="Rely Path Lab Online" />
+      <input type="hidden" name="subject" value="Home Sample Collection Request from Rely Path Lab" />
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required />
         </div>
+        <div class="col-md-6">
+          <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}" />
+        </div>
+        <div class="col-12">
+          <textarea name="address" class="form-control" placeholder="Full Address with Pin Code" rows="2" required></textarea>
+        </div>
+
+        <!-- MULTI-SELECT TESTS DROPDOWN -->
+        <div class="col-12">
+          <label><strong>Select Tests:</strong></label>
+          <select id="testSelect" class="form-select">
+            <option value="" disabled selected>-- Choose Test --</option>
+            <option value="ECG">ECG</option>
+            <option value="2D Echo">2D Echo</option>
+            <option value="LFT">LFT</option>
+            <option value="SGOT/SGPT">SGOT/SGPT</option>
+            <option value="KFT">KFT</option>
+            <option value="Creatinine Test">Creatinine Test</option>
+            <option value="TSH">TSH</option>
+            <option value="T3 T4 TSH">T3 T4 TSH</option>
+            <option value="Urine Routine">Urine Routine</option>
+            <option value="Microalbumin">Microalbumin</option>
+            <option value="CBC">CBC</option>
+            <option value="CBC With ESR">CBC With ESR</option>
+            <option value="ESR">ESR</option>
+            <option value="CRP">CRP</option>
+            <option value="HBA1C">HBA1C</option>
+            <option value="Iron Profile">Iron Profile</option>
+            <option value="Vitamin B12">Vitamin B12</option>
+            <option value="Vitamin D">Vitamin D</option>
+            <option value="Lipid Profile">Lipid Profile</option>
+            <option value="Blood Sugar">Blood Sugar</option>
+            <option value="HIV Rapid Screening">HIV Rapid Screening</option>
+            <option value="Syphilis Test">Syphilis Test</option>
+            <option value="Hepatitis B Antigen">Hepatitis B Antigen</option>
+            <option value="Blood Group & RH">Blood Group & RH</option>
+            <option value="LH">LH</option>
+            <option value="FSH">FSH</option>
+            <option value="Estradiol">Estradiol</option>
+            <option value="Progesterone">Progesterone</option>
+            <option value="Prolactin">Prolactin</option>
+            <option value="DHEAS">DHEAS</option>
+            <option value="Serum Testosterone">Serum Testosterone</option>
+            <option value="RF">RF</option>
+            <option value="ANA">ANA</option>
+            <option value="ASO">ASO</option>
+            <option value="C4">C4</option>
+            <option value="Uric Acid">Uric Acid</option>
+            <option value="Phosphorus">Phosphorus</option>
+            <option value="Alkaline Phosphatase">Alkaline Phosphatase</option>
+          </select>
+          <!-- List showing selected tests -->
+          <ul id="selectedTests" class="list-group mt-2"></ul>
+        </div>
+
+        <div class="col-12">
+          <textarea name="message" class="form-control" placeholder="Optional: Any instructions..." rows="3"></textarea>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-success w-100">Request Home Collection</button>
+        </div>
+        <p id="result2" class="text-center text-muted"></p>
       </div>
+    </form>
+  </div>
+</div>
+
     </div>
   </section>
+
+  <script>
+// Store selected tests
+const testSelect = document.getElementById('testSelect');
+const selectedTests = document.getElementById('selectedTests');
+const form = document.getElementById('homeForm');
+
+// Keep track in a Set
+const selectedTestsSet = new Set();
+
+testSelect.addEventListener('change', () => {
+  const test = testSelect.value;
+  if (test && !selectedTestsSet.has(test)) {
+    selectedTestsSet.add(test);
+
+    // Show in list
+    const li = document.createElement('li');
+    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+    li.textContent = test;
+
+    // Remove button
+    const removeBtn = document.createElement('button');
+    removeBtn.className = 'btn btn-sm btn-danger';
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', () => {
+      selectedTestsSet.delete(test);
+      selectedTests.removeChild(li);
+    });
+
+    li.appendChild(removeBtn);
+    selectedTests.appendChild(li);
+  }
+
+  // Reset dropdown
+  testSelect.selectedIndex = 0;
+});
+
+// Intercept form submission to append hidden inputs
+form.addEventListener('submit', (e) => {
+  // Remove old hidden fields first
+  form.querySelectorAll('input[name="tests[]"]').forEach(el => el.remove());
+
+  // Add hidden inputs for each selected test
+  selectedTestsSet.forEach(test => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'tests[]';
+    input.value = test;
+    form.appendChild(input);
+  });
+});
+</script>
 
   <hr>
 
@@ -289,7 +354,7 @@
         </div>
       </div>
       <!-- Right: Details -->
-      <div class="col-md-7">
+      <div class="col-md-7 p-5">
         <div class="test-details" id="testDetails">
           <h3>Select a Test</h3>
           <p class="price">--</p>
