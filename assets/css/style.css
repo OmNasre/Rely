@@ -89,7 +89,7 @@ html {
 
 .test-list li:hover,
 .test-list li.active {
-  background: #E8988A;
+  background: #B488AE;
   color: #fff;
   border-color: #B488AE;
 }
