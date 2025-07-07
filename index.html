@@ -17,6 +17,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
 
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -125,7 +126,7 @@
       <div id="form-appointment">
         <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
           <form id="appointmentForm">
-            <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+            <input type="hidden" name="access_key" value="c6974b8c-a988-4a0f-a90f-bdcc85d07e64">
             <input type="hidden" name="from_name" value="Rely Path Lab Online" />
             <input type="hidden" name="subject" value="Appointment Request from Rely Path Lab">
             <div class="row g-3">
@@ -162,7 +163,7 @@
  <div id="form-home" class="d-none">
   <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
     <form id="homeForm">
-      <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809" />
+      <input type="hidden" name="access_key" value="c6974b8c-a988-4a0f-a90f-bdcc85d07e64" />
       <input type="hidden" name="from_name" value="Rely Path Lab Online" />
       <input type="hidden" name="subject" value="Home Sample Collection Request from Rely Path Lab" />
 
@@ -178,52 +179,94 @@
         </div>
 
         <!-- MULTI-SELECT TESTS DROPDOWN -->
-        <div class="col-12">
-          <label><strong>Select Tests:</strong></label>
-          <select id="testSelect" class="form-select">
-            <option value="" disabled selected>-- Choose Test --</option>
-            <option value="ECG">ECG</option>
-            <option value="2D Echo">2D Echo</option>
-            <option value="LFT">LFT</option>
-            <option value="SGOT/SGPT">SGOT/SGPT</option>
-            <option value="KFT">KFT</option>
-            <option value="Creatinine Test">Creatinine Test</option>
-            <option value="TSH">TSH</option>
-            <option value="T3 T4 TSH">T3 T4 TSH</option>
-            <option value="Urine Routine">Urine Routine</option>
-            <option value="Microalbumin">Microalbumin</option>
-            <option value="CBC">CBC</option>
-            <option value="CBC With ESR">CBC With ESR</option>
-            <option value="ESR">ESR</option>
-            <option value="CRP">CRP</option>
-            <option value="HBA1C">HBA1C</option>
-            <option value="Iron Profile">Iron Profile</option>
-            <option value="Vitamin B12">Vitamin B12</option>
-            <option value="Vitamin D">Vitamin D</option>
-            <option value="Lipid Profile">Lipid Profile</option>
-            <option value="Blood Sugar">Blood Sugar</option>
-            <option value="HIV Rapid Screening">HIV Rapid Screening</option>
-            <option value="Syphilis Test">Syphilis Test</option>
-            <option value="Hepatitis B Antigen">Hepatitis B Antigen</option>
-            <option value="Blood Group & RH">Blood Group & RH</option>
-            <option value="LH">LH</option>
-            <option value="FSH">FSH</option>
-            <option value="Estradiol">Estradiol</option>
-            <option value="Progesterone">Progesterone</option>
-            <option value="Prolactin">Prolactin</option>
-            <option value="DHEAS">DHEAS</option>
-            <option value="Serum Testosterone">Serum Testosterone</option>
-            <option value="RF">RF</option>
-            <option value="ANA">ANA</option>
-            <option value="ASO">ASO</option>
-            <option value="C4">C4</option>
-            <option value="Uric Acid">Uric Acid</option>
-            <option value="Phosphorus">Phosphorus</option>
-            <option value="Alkaline Phosphatase">Alkaline Phosphatase</option>
-          </select>
-          <!-- List showing selected tests -->
-          <ul id="selectedTests" class="list-group mt-2"></ul>
-        </div>
+<div class="col-12">
+  <label><strong>Select Tests:</strong></label>
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary w-100 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Click to select tests
+    </button>
+    <div class="dropdown-menu p-2" style="max-height:300px; overflow-y:auto; width:100%;">
+      <input type="text" id="testSearchInput" class="form-control mb-2" placeholder="Search tests...">
+      <div id="testCheckboxes">
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Lipid Profile"><label class="form-check-label">Lipid Profile</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Cholesterol"><label class="form-check-label">Cholesterol</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Triglyceride"><label class="form-check-label">Triglyceride</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="HDL Cholesterol"><label class="form-check-label">HDL Cholesterol</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="LDL Cholesterol"><label class="form-check-label">LDL Cholesterol</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Lactate Dehydrogenase (LDH)"><label class="form-check-label">Lactate Dehydrogenase (LDH)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CK-MB"><label class="form-check-label">CK-MB</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CPK (Total)"><label class="form-check-label">CPK (Total)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="TROPONIN I (TROPI)"><label class="form-check-label">TROPONIN I (TROPI)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="TROPONIN T (TROPT)"><label class="form-check-label">TROPONIN T (TROPT)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Homocysteine"><label class="form-check-label">Homocysteine</label></div>
+
+    <!-- Liver -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="LFT"><label class="form-check-label">LFT</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="SGOT/SGPT"><label class="form-check-label">SGOT/SGPT</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Bilirubin Total/Direct"><label class="form-check-label">Bilirubin Total/Direct</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Alkaline Phosphatase"><label class="form-check-label">Alkaline Phosphatase</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Serum Proteins Total/Albumin"><label class="form-check-label">Serum Proteins Total/Albumin</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Gamma GT"><label class="form-check-label">Gamma GT</label></div>
+
+    <!-- Kidney -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="KFT"><label class="form-check-label">Kidney Function Test (KFT)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Creatinine Test"><label class="form-check-label">Creatinine</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Uric Acid"><label class="form-check-label">Uric Acid</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Electrolyte"><label class="form-check-label">Electrolyte</label></div>
+
+    <!-- Thyroid -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="TSH"><label class="form-check-label">TSH</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="T3 T4 TSH"><label class="form-check-label">T3 T4 TSH (Free-Thyroid Profile)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Anti-TPO"><label class="form-check-label">Anti-TPO</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Anti-TG"><label class="form-check-label">Anti-TG (ATG)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Thyroglobulin"><label class="form-check-label">Thyroglobulin</label></div>
+
+    <!-- Diabetes -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Sugar Fasting"><label class="form-check-label">Blood Sugar Fasting</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Sugar Post Prandial"><label class="form-check-label">Blood Sugar Post Prandial</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Sugar Random"><label class="form-check-label">Blood Sugar Random</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="HBA1C"><label class="form-check-label">HbA1c</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Insulin Fasting"><label class="form-check-label">Insulin Fasting</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="C-Peptide"><label class="form-check-label">C-Peptide</label></div>
+
+    <!-- Vitamins & Minerals -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Vitamin B12"><label class="form-check-label">Vitamin B12</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Vitamin D"><label class="form-check-label">Vitamin D3</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Calcium"><label class="form-check-label">Calcium</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Magnesium"><label class="form-check-label">Magnesium</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Phosphorus"><label class="form-check-label">Phosphorus</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Iron Profile"><label class="form-check-label">Iron Profile</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Ferritin"><label class="form-check-label">Ferritin</label></div>
+
+    <!-- Hormones -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="LH"><label class="form-check-label">LH</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="FSH"><label class="form-check-label">FSH</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Estradiol"><label class="form-check-label">Estradiol</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Progesterone"><label class="form-check-label">Progesterone</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Prolactin"><label class="form-check-label">Prolactin</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Testosterone"><label class="form-check-label">Serum Testosterone</label></div>
+
+    <!-- Infection -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="HIV Rapid Screening"><label class="form-check-label">HIV Rapid Screening</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Hepatitis B Antigen"><label class="form-check-label">Hepatitis B Antigen</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Syphilis Test"><label class="form-check-label">Syphilis Test</label></div>
+
+    <!-- General -->
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Blood Group & RH"><label class="form-check-label">Blood Group & RH</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CBC"><label class="form-check-label">CBC</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CBC With ESR"><label class="form-check-label">CBC With ESR</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="ESR"><label class="form-check-label">ESR</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CRP"><label class="form-check-label">CRP</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Urine Routine"><label class="form-check-label">Urine Routine</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Microalbumin"><label class="form-check-label">Microalbumin</label></div>
+
+      </div>
+    </div>
+  </div>
+  <input type="hidden" name="tests" id="selectedTestsInput">
+  <ul id="selectedTestsList" class="list-group mt-2"></ul>
+</div>
+
 
         <div class="col-12">
           <textarea name="message" class="form-control" placeholder="Optional: Any instructions..." rows="3"></textarea>
@@ -241,57 +284,38 @@
     </div>
   </section>
 
-  <script>
-// Store selected tests
-const testSelect = document.getElementById('testSelect');
-const selectedTests = document.getElementById('selectedTests');
-const form = document.getElementById('homeForm');
-
-// Keep track in a Set
-const selectedTestsSet = new Set();
-
-testSelect.addEventListener('change', () => {
-  const test = testSelect.value;
-  if (test && !selectedTestsSet.has(test)) {
-    selectedTestsSet.add(test);
-
-    // Show in list
-    const li = document.createElement('li');
-    li.className = 'list-group-item d-flex justify-content-between align-items-center';
-    li.textContent = test;
-
-    // Remove button
-    const removeBtn = document.createElement('button');
-    removeBtn.className = 'btn btn-sm btn-danger';
-    removeBtn.textContent = 'Remove';
-    removeBtn.addEventListener('click', () => {
-      selectedTestsSet.delete(test);
-      selectedTests.removeChild(li);
-    });
-
-    li.appendChild(removeBtn);
-    selectedTests.appendChild(li);
-  }
-
-  // Reset dropdown
-  testSelect.selectedIndex = 0;
-});
-
-// Intercept form submission to append hidden inputs
-form.addEventListener('submit', (e) => {
-  // Remove old hidden fields first
-  form.querySelectorAll('input[name="tests[]"]').forEach(el => el.remove());
-
-  // Add hidden inputs for each selected test
-  selectedTestsSet.forEach(test => {
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = 'tests[]';
-    input.value = test;
-    form.appendChild(input);
+<script>
+// Filter checkboxes as user types
+document.getElementById('testSearchInput').addEventListener('keyup', function() {
+  const filter = this.value.toLowerCase();
+  document.querySelectorAll('#testCheckboxes .form-check').forEach(function(item) {
+    const label = item.textContent.toLowerCase();
+    item.style.display = label.includes(filter) ? '' : 'none';
   });
 });
+
+// Update hidden input and list on selection change
+document.querySelectorAll('#testCheckboxes .form-check-input').forEach(function(checkbox) {
+  checkbox.addEventListener('change', updateSelectedTests);
+});
+
+function updateSelectedTests() {
+  const selected = Array.from(document.querySelectorAll('#testCheckboxes .form-check-input:checked'))
+    .map(cb => cb.value);
+  // Update hidden input (comma-separated)
+  document.getElementById('selectedTestsInput').value = selected.join(', ');
+  // Update visual list
+  const list = document.getElementById('selectedTestsList');
+  list.innerHTML = '';
+  selected.forEach(function(test) {
+    const li = document.createElement('li');
+    li.textContent = test;
+    li.className = 'list-group-item';
+    list.appendChild(li);
+  });
+}
 </script>
+
 
   <hr>
 
@@ -702,7 +726,7 @@ form.addEventListener('submit', (e) => {
       <!-- Contact Us -->
       <div class="col-md-3 mb-3">
         <h5>Contact Us</h5>
-        <p><i class="fas fa-phone"></i> +91-8446365515</p>
+        <p><i class="fas fa-phone"></i> +91-7559258660</p>
         <p><i class="fas fa-envelope"></i> relypathlabs2021@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Nagpur, India</p>
       </div>

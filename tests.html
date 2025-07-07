@@ -58,53 +58,70 @@
     <div class="rely-organ-filter" id="organCategories">
         
       <div class="rely-organ-btn active" data-organ="All">
-        <img src="./assets/images/all.png" alt="All">
+        <img src="./assets/images/organs/all.png" alt="All">
         <div>All</div>
       </div>
       <div class="rely-organ-btn" data-organ="Heart">
-        <img src="./assets/images/heart.jpeg" alt="Heart">
+        <img src="./assets/images/organs/heart.jpeg" alt="Heart">
         <div>Heart</div>
       </div>
       <div class="rely-organ-btn" data-organ="Liver">
-        <img src="./assets/images/liver.jpeg" alt="Liver">
+        <img src="./assets/images/organs/liver.jpeg" alt="Liver">
         <div>Liver</div>
       </div>
       <div class="rely-organ-btn" data-organ="Kidney">
-        <img src="./assets/images/kidney.jpg" alt="Kidney">
+        <img src="./assets/images/organs/kidney.jpg" alt="Kidney">
         <div>Kidney</div>
       </div>
       <div class="rely-organ-btn" data-organ="Thyroid">
-        <img src="./assets/images/throid.png" alt="Thyroid">
+        <img src="./assets/images/organs/throid.png" alt="Thyroid">
         <div>Thyroid</div>
       </div>
       <div class="rely-organ-btn" data-organ="Blood">
-        <img src="./assets/images/blood.png" alt="Blood">
+        <img src="./assets/images/organs/blood.png" alt="Blood">
         <div>Blood</div>
       </div>
       <div class="rely-organ-btn" data-organ="Diabetes">
-        <img src="./assets/images/diabeties.jpeg" alt="Diabetes">
+        <img src="./assets/images/organs/diabeties.jpeg" alt="Diabetes">
         <div>Diabetes</div>
       </div>
       <div class="rely-organ-btn" data-organ="Vitamins">
-        <img src="./assets/images/vitamins.png" alt="Vitamins">
+        <img src="./assets/images/organs/vitamins.png" alt="Vitamins">
         <div>Vitamins</div>
       </div>
       <div class="rely-organ-btn" data-organ="Infection">
-        <img src="./assets/images/infection.png" alt="Infection">
+        <img src="./assets/images/organs/infection.png" alt="Infection">
         <div>Infection</div>
       </div>
       <div class="rely-organ-btn" data-organ="Hormones">
-        <img src="./assets/images/harmones.png" alt="Hormones">
+        <img src="./assets/images/organs/harmones.png" alt="Hormones">
         <div>Hormones</div>
       </div>
       <div class="rely-organ-btn" data-organ="Inflammation">
-        <img src="./assets/images/inflammation.png" alt="Inflammation">
+        <img src="./assets/images/organs/inflammation.png" alt="Inflammation">
         <div>Inflammation</div>
       </div>
-      <div class="rely-organ-btn" data-organ="Bone">
-        <img src="./assets/images/bone.png" alt="Bone">
-        <div>Bone</div>
+      <div class="rely-organ-btn" data-organ="Stool">
+        <img src="./assets/images/organs/Stool.png" alt="Stool">
+        <div>Stool</div>
       </div>
+            <div class="rely-organ-btn" data-organ="Tumor Markers">
+        <img src="./assets/images/organs/Tumor Markers.png" alt="Tumor Markers">
+        <div>Tumor Markers</div>
+      </div>
+            <div class="rely-organ-btn" data-organ="Autoimmune">
+        <img src="./assets/images/organs/Autoimmune.png" alt="Autoimmune">
+        <div>Autoimmune</div>
+      </div>
+            <div class="rely-organ-btn" data-organ="Urine">
+        <img src="./assets/images/organs/Urine.png" alt="Urine">
+        <div>Urine</div>
+      </div>
+            <div class="rely-organ-btn" data-organ="Coagulation">
+        <img src="./assets/images/organs/Coagulation.jpeg" alt="Coagulation">
+        <div>Coagulation</div>
+      </div>
+         
         <button class="scroll-btn right-btn" aria-label="Scroll Right">
     &#9654;
   </button>
@@ -129,47 +146,187 @@
 
 
   <script>
-    const testData = [
-      { name: "ECG", organ: "Heart", price: "₹500", desc: "Electrocardiogram to assess heart rhythm. Diagnoses arrhythmias, ischemia, and more. Quick and painless." },
-      { name: "2D Echo", organ: "Heart", price: "₹1200", desc: "Ultrasound to visualize heart chambers and valves. Detects structural problems." },
-      { name: "LFT", organ: "Liver", price: "₹649", desc: "Measures enzymes like ALT, AST, bilirubin. Used to assess liver health." },
-      { name: "SGOT/SGPT", organ: "Liver", price: "₹399", desc: "Detects liver inflammation. Helps track medication effects or hepatitis." },
-      { name: "KFT", organ: "Kidney", price: "₹599", desc: "Kidney profile includes urea, creatinine. Identifies renal issues early." },
-      { name: "Creatinine Test", organ: "Kidney", price: "₹299", desc: "Checks waste buildup due to kidney dysfunction." },
-      { name: "TSH", organ: "Thyroid", price: "₹349", desc: "Thyroid Stimulating Hormone to screen for thyroid problems." },
-      { name: "T3 T4 TSH", organ: "Thyroid", price: "₹599", desc: "Complete thyroid hormone evaluation. Identifies hyper/hypo function." },
-      { name: "Urine Routine", organ: "Urine", price: "₹249", desc: "Checks for protein, sugar, ketones, and crystals in urine." },
-      { name: "Microalbumin", organ: "Urine", price: "₹450", desc: "Detects early kidney damage in diabetics via protein levels." },
-      { name: "CBC", organ: "Blood", price: "₹300", desc: "Complete Blood Count: detects infections, anemia, and more." },
-      { name: "CBC With ESR", organ: "Blood", price: "₹399", desc: "Complete blood test including ESR to detect inflammation." },
-      { name: "ESR", organ: "Blood", price: "₹149", desc: "Erythrocyte Sedimentation Rate to detect inflammation." },
-      { name: "CRP", organ: "Blood", price: "₹250", desc: "C-Reactive Protein test for inflammation." },
-      { name: "HBA1C", organ: "Diabetes", price: "₹499", desc: "Average blood glucose over past 2-3 months." },
-      { name: "Iron Profile", organ: "Blood", price: "₹599", desc: "Includes serum iron, TIBC, and transferrin saturation." },
-      { name: "Vitamin B12", organ: "Vitamins", price: "₹550", desc: "Checks Vitamin B12 levels important for nerves & blood." },
-      { name: "Vitamin D", organ: "Vitamins", price: "₹999", desc: "Checks Vitamin D levels for bone and immune health." },
-      { name: "Lipid Profile", organ: "Heart", price: "₹699", desc: "Measures cholesterol and triglycerides." },
-      { name: "Blood Sugar", organ: "Diabetes", price: "₹149", desc: "Fasting or random blood sugar test." },
-      { name: "TSH", organ: "Thyroid", price: "₹349", desc: "Checks thyroid function, important in pregnancy." },
-      { name: "HIV Rapid Screening", organ: "Infection", price: "₹250", desc: "Screens for HIV." },
-      { name: "Syphilis Test", organ: "Infection", price: "₹350", desc: "Detects syphilis infection." },
-      { name: "Hepatitis B Antigen", organ: "Infection", price: "₹450", desc: "Detects Hepatitis B infection." },
-      { name: "Blood Group & RH", organ: "Blood", price: "₹199", desc: "Determines blood type and Rh factor." },
-      { name: "LH", organ: "Hormones", price: "₹349", desc: "Luteinizing Hormone." },
-      { name: "FSH", organ: "Hormones", price: "₹349", desc: "Follicle Stimulating Hormone." },
-      { name: "Estradiol", organ: "Hormones", price: "₹449", desc: "Estrogen level test." },
-      { name: "Progesterone", organ: "Hormones", price: "₹499", desc: "Checks progesterone levels." },
-      { name: "Prolactin", organ: "Hormones", price: "₹399", desc: "Detects hormone imbalances." },
-      { name: "DHEAS", organ: "Hormones", price: "₹599", desc: "Androgen hormone." },
-      { name: "Serum Testosterone", organ: "Hormones", price: "₹549", desc: "Measures testosterone levels." },
-      { name: "RF", organ: "Inflammation", price: "₹300", desc: "Rheumatoid Factor to detect arthritis." },
-      { name: "ANA", organ: "Inflammation", price: "₹450", desc: "Anti-Nuclear Antibody for autoimmune diseases." },
-      { name: "ASO", organ: "Inflammation", price: "₹300", desc: "Antistreptolysin O." },
-      { name: "C4", organ: "Inflammation", price: "₹400", desc: "Complement protein C4 level." },
-      { name: "Uric Acid", organ: "Kidney", price: "₹250", desc: "High levels indicate gout or kidney issues." },
-      { name: "Phosphorus", organ: "Bone", price: "₹200", desc: "Essential for bone health." },
-      { name: "Alkaline Phosphatase", organ: "Liver", price: "₹299", desc: "Liver and bone disease marker." }
-    ];
+const testData = [
+  { name: "Thyroid Profile", price: "₹500", organ: "Thyroid", desc: "Comprehensive thyroid function screening. Helps detect hypo- or hyperthyroidism. Essential for metabolic health." },
+  { name: "TSH (Thyroid Stimulating Hormone)", price: "₹250", organ: "Thyroid", desc: "Measures TSH levels in blood. Identifies thyroid imbalance. Useful in thyroid disease monitoring." },
+  { name: "Free-Thyroid Profile (TSH, FT3, FT4)", price: "₹600", organ: "Thyroid", desc: "Complete thyroid hormone panel. Detects gland dysfunction. Guides treatment decisions." },
+  { name: "Anti-TPO", price: "₹600", organ: "Thyroid", desc: "Tests for thyroid autoantibodies. Helps diagnose autoimmune thyroiditis. Important in hypothyroidism workup." },
+  { name: "Anti-TG (ATG)", price: "₹600", organ: "Thyroid", desc: "Detects antibodies against thyroglobulin. Evaluates autoimmune thyroid disease. Assists in thyroid cancer follow-up." },
+  { name: "Thyroglobulin", price: "₹600", organ: "Thyroid", desc: "Tumor marker for thyroid cancer. Monitors post-treatment recurrence. Also used in thyroiditis diagnosis." },
+  { name: "Kidney Function Test (KFT)", price: "₹500", organ: "Kidney", desc: "Evaluates overall kidney health. Includes urea, creatinine, and more. Essential in detecting kidney disease early." },
+  { name: "Creatinine", price: "₹150", organ: "Kidney", desc: "Measures waste levels in blood. Assesses kidney filtration ability. Important for renal monitoring." },
+  { name: "Uric Acid", price: "₹150", organ: "Kidney", desc: "Screens for gout and kidney stones. High levels indicate metabolic issues. Useful in arthritis evaluation." },
+  { name: "Electrolyte", price: "₹300", organ: "Kidney", desc: "Measures sodium, potassium, chloride. Assesses hydration and balance. Critical in fluid disorder detection." },
+  { name: "Liver Function Test (LFT)", price: "₹500", organ: "Liver", desc: "Comprehensive liver enzyme panel. Detects liver damage or disease. Monitors medication side effects." },
+  { name: "Bilirubin Total/Direct", price: "₹150", organ: "Liver", desc: "Checks for jaundice and liver function. Differentiates types of jaundice. Monitors liver disease progression." },
+  { name: "SGPT", price: "₹150", organ: "Liver", desc: "Alanine transaminase enzyme test. Detects liver inflammation. Tracks hepatitis and fatty liver disease." },
+  { name: "SGOT", price: "₹150", organ: "Liver", desc: "Aspartate transaminase enzyme test. Identifies liver and heart damage. Useful in liver disease monitoring." },
+  { name: "Alkaline Phosphate", price: "₹150", organ: "Liver", desc: "Detects liver and bone disorders. Raised levels in bile duct issues. Supports diagnosis of bone diseases." },
+  { name: "Serum Proteins Total/Albumin", price: "₹150", organ: "Liver", desc: "Assesses protein production in liver. Low levels suggest liver disease. Helps monitor nutritional status." },
+  { name: "Gamma GT", price: "₹150", organ: "Liver", desc: "Enzyme marker for bile duct health. Elevated in alcohol liver disease. Supports diagnosis of liver disorders." },
+  { name: "Lipid Profile", price: "₹500", organ: "Heart", desc: "Measures cholesterol and triglycerides. Evaluates heart disease risk. Essential for cardiovascular screening." },
+  { name: "Cholesterol", price: "₹150", organ: "Heart", desc: "Measures total blood cholesterol. Key marker of heart health. Guides lipid-lowering therapy." },
+  { name: "Triglyceride", price: "₹150", organ: "Heart", desc: "Checks blood fat levels. High levels linked to heart disease. Important in metabolic syndrome screening." },
+  { name: "HDL Cholesterol", price: "₹150", organ: "Heart", desc: "Good cholesterol measurement. Higher levels protect heart. Part of lipid risk assessment." },
+  { name: "LDL Cholesterol", price: "₹150", organ: "Heart", desc: "Bad cholesterol marker. High levels raise heart risk. Key target in lipid management." },
+  { name: "Sugar (Glucose) Fasting", price: "₹50", organ: "Diabetes", desc: "Measures fasting blood sugar. Essential for diabetes diagnosis. Screens for impaired glucose tolerance." },
+  { name: "Sugar (Glucose) Post Prandial", price: "₹50", organ: "Diabetes", desc: "Measures blood sugar after meals. Detects post-meal spikes. Helps monitor diabetes control." },
+  { name: "Sugar (Glucose) Random", price: "₹50", organ: "Diabetes", desc: "Quick blood sugar check anytime. Useful in screening diabetes. Assesses glucose fluctuations." },
+  { name: "Hba1c (Whole Blood) BY HPLC", price: "₹600", organ: "Diabetes", desc: "Average sugar level over 3 months. Key in diabetes monitoring. Indicates long-term control." },
+  { name: "Insulin Fasting", price: "₹600", organ: "Diabetes", desc: "Measures fasting insulin levels. Assesses insulin resistance. Useful in metabolic disorder diagnosis." },
+  { name: "C-Peptide", price: "₹900", organ: "Diabetes", desc: "Evaluates pancreatic insulin production. Differentiates diabetes types. Helps guide insulin therapy." },
+  { name: "Follicle Stimulating Hormone (FSH)", price: "₹400", organ: "Hormones", desc: "Measures FSH in blood. Important in fertility testing. Evaluates reproductive health." },
+  { name: "Luteinizing Hormone (LH)", price: "₹400", organ: "Hormones", desc: "Measures LH levels. Assesses ovulation and fertility. Used in hormonal disorder diagnosis." },
+  { name: "Prolactin", price: "₹400", organ: "Hormones", desc: "Measures prolactin hormone. Checks pituitary function. Detects prolactinoma and menstrual issues." },
+  { name: "LH-FSH-PRL", price: "₹1000", organ: "Hormones", desc: "Combined reproductive hormone panel. Useful in infertility workup. Evaluates pituitary function." },
+  { name: "ANTI MULLERIAN HORMONE (AMH)", price: "₹2000", organ: "Hormones", desc: "Marker of ovarian reserve. Predicts fertility potential. Guides IVF treatment planning." },
+  { name: "Beta HCG", price: "₹700", organ: "Hormones", desc: "Pregnancy confirmation test. Also detects certain tumors. Useful in early pregnancy monitoring." },
+  { name: "Testosterone", price: "₹500", organ: "Hormones", desc: "Measures male hormone levels. Detects deficiency or excess. Assesses reproductive health." },
+  { name: "Progesterone", price: "₹500", organ: "Hormones", desc: "Evaluates luteal phase sufficiency. Monitors pregnancy health. Helps diagnose menstrual disorders." },
+  { name: "Estradiol/Oestrogen (E2)", price: "₹500", organ: "Hormones", desc: "Measures estrogen levels. Important in menstrual health. Assesses ovarian function." },
+  { name: "Growth Hormone", price: "₹500", organ: "Hormones", desc: "Checks for growth disorders. Used in short stature workup. Detects pituitary problems." },
+  { name: "Cortisol", price: "₹500", organ: "Hormones", desc: "Measures stress hormone levels. Evaluates adrenal gland function. Diagnoses Cushing's or Addison's." },
+  { name: "PTH-Intact (Parathyroid Hormone)", price: "₹700", organ: "Hormones", desc: "Measures parathyroid hormone. Assesses calcium metabolism. Diagnoses parathyroid disorders." },
+  { name: "WIDAL SLIDE METHOD", price: "₹200", organ: "Infection", desc: "Detects typhoid fever antibodies. Quick slide agglutination test. Aids typhoid diagnosis." },
+  { name: "WIDAL TUBE METHOD", price: "₹300", organ: "Infection", desc: "More sensitive typhoid antibody test. Quantifies antibody levels. Confirms typhoid infection." },
+  { name: "DENGUE-NS1 CARD", price: "₹400", organ: "Infection", desc: "Early detection of dengue virus. Detects NS1 antigen. Rapid diagnosis tool." },
+  { name: "DENGUE-IgG . IgM CARD", price: "₹700", organ: "Infection", desc: "Identifies dengue IgG/IgM antibodies. Confirms current or past infection. Useful in fever evaluation." },
+  { name: "DENGUE-IgG/IgM/NS1", price: "₹900", organ: "Infection", desc: "Combo dengue test. Detects early and late markers. Aids comprehensive dengue diagnosis." },
+  { name: "HIV-I&II CARD", price: "₹400", organ: "Infection", desc: "Rapid screening for HIV 1/2. Provides quick results. Used in HIV diagnosis and screening." },
+  { name: "HIV -ELISA", price: "₹500", organ: "Infection", desc: "Lab-based HIV antibody detection. Higher sensitivity than card tests. Confirms HIV status." },
+  { name: "HBsAg-Rapid CARD", price: "₹400", organ: "Infection", desc: "Screens for Hepatitis B infection. Quick and reliable. First-line hepatitis B test." },
+  { name: "HBsAg-ELISA", price: "₹500", organ: "Infection", desc: "Detailed hepatitis B test. Lab-based with high accuracy. Confirms HBsAg status." },
+  { name: "TB GOLD QUANTIFERON IGRA", price: "₹3500", organ: "Infection", desc: "Detects latent TB infection. Blood-based interferon assay. Alternative to Mantoux test." },
+  { name: "Stool Occult Blood", price: "₹250", organ: "Stool", desc: "Screens for hidden blood in stool. Detects GI bleeding. Aids colon cancer screening." },
+  // You can continue the rest similarly...
+  // Tumor Markers
+  { name: "PSA - Total", price: "₹600", organ: "Tumor Markers", desc: "Prostate-specific antigen test. Detects prostate cancer early. Useful for screening and monitoring." },
+  { name: "CA-125", price: "₹700", organ: "Tumor Markers", desc: "Tumor marker for ovarian cancer. Also raised in other conditions. Aids diagnosis and follow-up." },
+  { name: "CA 19.9", price: "₹900", organ: "Tumor Markers", desc: "Marker for pancreatic and GI cancers. Helps monitor treatment response. Supports cancer diagnosis." },
+  { name: "CA15.3", price: "₹900", organ: "Tumor Markers", desc: "Breast cancer marker in blood. Used for monitoring recurrence. Supports cancer management." },
+  { name: "ALPHA FETO PROTEIN (AFP)", price: "₹700", organ: "Tumor Markers", desc: "Marker for liver and testicular tumors. Used in prenatal screening. Guides cancer treatment decisions." },
+  { name: "CEA", price: "₹700", organ: "Tumor Markers", desc: "Carcinoembryonic antigen for colon cancer. Also raised in smokers. Monitors disease progression." },
+
+  // Cardiac Profile
+  { name: "Lactate Dehydrogenase (LDH)", price: "₹400", organ: "Heart", desc: "Enzyme elevated in tissue damage. Used in heart attack diagnosis. Also indicates other diseases." },
+  { name: "CK-MB", price: "₹400", organ: "Heart", desc: "Cardiac marker for heart damage. Helps detect myocardial infarction. Useful in emergency settings." },
+  { name: "CPK (Total)", price: "₹300", organ: "Heart", desc: "Measures total creatine kinase. Indicates muscle injury. Helps in cardiac event diagnosis." },
+  { name: "TROPONIN I (TROPI)", price: "₹1200", organ: "Heart", desc: "Highly specific marker for heart attack. Rises within hours of damage. Critical for early detection." },
+  { name: "TROPONIN T (TROPT)", price: "₹1200", organ: "Heart", desc: "Another troponin protein marker. Confirms myocardial injury. Guides treatment decisions." },
+  { name: "D-Dimer", price: "₹1200", organ: "Coagulation", desc: "Detects blood clots and thrombosis. Elevated in DVT and PE. Important emergency diagnostic test." },
+  { name: "Homocysteine", price: "₹1400", organ: "Heart", desc: "Amino acid linked to heart disease. Elevated levels increase risk. Guides cardiovascular prevention." },
+
+  // Autoimmune
+  { name: "RA Factor", price: "₹400", organ: "Autoimmune", desc: "Rheumatoid arthritis screening test. Detects autoantibodies in blood. Supports arthritis diagnosis." },
+  { name: "Anti CCP (ACCP)", price: "₹1300", organ: "Autoimmune", desc: "Specific test for rheumatoid arthritis. More accurate than RA Factor. Confirms autoimmune disease." },
+  { name: "HLAB27", price: "₹1200", organ: "Autoimmune", desc: "Genetic marker for ankylosing spondylitis. Useful in arthritis workup. Guides rheumatologic diagnosis." },
+
+  // Urine & Stool Tests
+  { name: "Urine R/M", price: "₹100", organ: "Urine", desc: "Routine urine examination. Checks cells, crystals, and infection. Basic urinary health assessment." },
+  { name: "Urine C/S", price: "₹500", organ: "Urine", desc: "Urine culture and sensitivity. Detects bacterial infection. Guides antibiotic therapy." },
+  { name: "Stool R/M", price: "₹300", organ: "Stool", desc: "Routine stool examination. Checks parasites, blood, and infection. Essential digestive health test." },
+  { name: "Stool Reducing Substance", price: "₹200", organ: "Stool", desc: "Detects carbohydrate malabsorption. Used in pediatric diarrhea cases. Guides dietary adjustments." },
+  { name: "Stool Culture", price: "₹700", organ: "Stool", desc: "Identifies bacterial pathogens. Confirms gastrointestinal infections. Determines appropriate treatment." },
+
+  // Coagulation Profile
+  { name: "PT-INR", price: "₹400", organ: "Coagulation", desc: "Prothrombin time with INR. Monitors blood thinning therapy. Evaluates bleeding risk." },
+  { name: "APTT", price: "₹400", organ: "Coagulation", desc: "Activated partial thromboplastin time. Assesses clotting pathways. Used pre-surgery and in bleeding disorders." },
+   {
+    name: "PT-INR",
+    organ: "Coagulation",
+    price: "₹400",
+    desc: "Measures blood clotting time. Important before surgery or if on anticoagulants. Monitors bleeding disorders."
+  },
+  {
+    name: "APTT",
+    organ: "Coagulation",
+    price: "₹400",
+    desc: "Activated Partial Thromboplastin Time. Evaluates intrinsic clotting pathway. Helps diagnose bleeding issues."
+  },
+  {
+    name: "Coagulation Profile",
+    organ: "Coagulation",
+    price: "₹700",
+    desc: "Comprehensive clotting assessment including PT, APTT. Detects coagulation disorders. Guides treatment."
+  },
+  {
+    name: "D-Dimer",
+    organ: "Coagulation",
+    price: "₹1200",
+    desc: "Detects blood clots in the body. Elevated in DVT, PE. Helps rule out thrombosis."
+  },
+  {
+    name: "Vitamin B12",
+    organ: "Vitamins",
+    price: "₹700",
+    desc: "Checks Vitamin B12 levels for nerve health. Detects deficiency causing anemia. Essential for energy production."
+  },
+  {
+    name: "Vitamin D3",
+    organ: "Vitamins",
+    price: "₹1200",
+    desc: "Measures Vitamin D important for bones. Deficiency can cause weakness and pain. Supports immunity."
+  },
+  {
+    name: "Ferritin",
+    organ: "Vitamins",
+    price: "₹600",
+    desc: "Assesses iron storage in the body. Low in anemia. High in inflammation or liver disease."
+  },
+  {
+    name: "Total IGE",
+    organ: "Vitamins",
+    price: "₹600",
+    desc: "Measures total IgE antibodies. Elevated in allergies and asthma. Helps identify hypersensitivity."
+  },
+  {
+    name: "Blood Group",
+    organ: "Blood",
+    price: "₹100",
+    desc: "Determines ABO and Rh blood group. Essential before transfusions. Important in pregnancy."
+  },
+  {
+    name: "CBC - Complete Blood Count",
+    organ: "Blood",
+    price: "₹300",
+    desc: "Counts red cells, white cells, and platelets. Detects anemia, infections. General health indicator."
+  },
+  {
+    name: "CBC with PS For Opinion",
+    organ: "Blood",
+    price: "₹400",
+    desc: "CBC plus Peripheral Smear. Provides detailed view of blood cells. Helps diagnose complex conditions."
+  },
+  {
+    name: "C-REACTIVE PROTEIN (CRP)",
+    organ: "Inflammation",
+    price: "₹400",
+    desc: "Detects acute inflammation in the body. Elevated in infection or chronic disease. Monitors treatment response."
+  },
+  {
+    name: "Phosphorous",
+    organ: "Vitamins",
+    price: "₹400",
+    desc: "Checks phosphorus levels needed for bone health. Imbalance seen in kidney disease. Supports energy metabolism."
+  },
+  {
+    name: "Magnesium",
+    organ: "Vitamins",
+    price: "₹300",
+    desc: "Measures magnesium for muscle and nerve function. Low levels cause cramps and weakness. Important in metabolism."
+  },
+  {
+    name: "Calcium",
+    organ: "Vitamins",price: "₹250",desc: "Assesses calcium levels essential for bones and heart. Low or high values can indicate disease. Routine health check."
+  },
+  {name: "IRON PROFILE",organ: " Vitamins",price: "₹600",desc: "Includes serum iron and TIBC. Evaluates anemia or overload. Important in fatigue assessment."
+  },
+  {
+    name: "HB ELECTROPHORESIS (HPLC METHOD)", organ: "Blood", price: "₹900", desc: "Analyzes different hemoglobin types. Detects thalassemia and sickle cell disease. Advanced diagnostic tool."
+  }
+
+];
+
 
     const categoryItems = document.querySelectorAll('.rely-organ-btn');
     const testListEl = document.getElementById('testList');
@@ -678,7 +835,7 @@
 
       <div class="mx-auto form-wrapper">
         <form id="contactForm" class="p-4 bg-white rounded shadow-sm">
-          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809" />
+          <input type="hidden" name="access_key" value="c6974b8c-a988-4a0f-a90f-bdcc85d07e64" />
           <input type="hidden" name="subject" value="Package Booking " />
           <input type="hidden" name="from_name" value="Rely Path Lab Online" />
 
@@ -801,7 +958,7 @@
       <!-- Contact Us -->
       <div class="col-md-3 mb-3">
         <h5>Contact Us</h5>
-        <p><i class="fas fa-phone"></i> +91-8446365515</p>
+        <p><i class="fas fa-phone"></i> +91-7559258660</p>
         <p><i class="fas fa-envelope"></i> relypathlabs2021@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Nagpur, India</p>
       </div>
