@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rely Path Lab - Home</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -31,10 +33,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="aboutus.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="technology.html">Technology</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="tests.html">Tests</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+           <li class="nav-item">
+          <a href="http://122.170.9.118/login.aspx" class="btn btn-success ms-lg-3">
+            Client Login
+          </a>
+        </li>
         </ul>
       </div>
     </div>
@@ -43,682 +50,612 @@
 
 
   <!-- Add your homepage sections here (about, features, tests, etc.) -->
-   
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>Trusted Pathology at Your Doorstep</h1>
-    <p class="mt-3">
-      NABL & ISO certified lab serving clinics, hospitals, and patients with accurate diagnostics and same-day reports.
-    </p>
-    <ul class="list-inline mt-4">
-      <li class="list-inline-item">✅ 30% Off on First Booking</li>
-      <li class="list-inline-item">✅ Free Home Sample Collection</li>
-    </ul>
-    <div class="mt-4">
-      <a href="#" class="btn btn-success btn-lg">Book a Test Now</a>
-    </div>
-  </div>
-</section>
 
-<hr>
-<!-- About Us Section -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left: Image -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Rely Path Lab" class="img-fluid rounded shadow-sm">
-      </div>
-      
-      <!-- Right: Content -->
-      <div class="col-md-6">
-        <h2 class="fw-bold mb-3">About Rely Path Lab</h2>
-        <p class="text-muted">
-          At Rely Path Lab, we are committed to delivering accurate and timely diagnostic solutions. NABL and ISO certified, we partner with hospitals, clinics, and individuals to offer reliable pathology services.
-        </p>
-        <p class="text-muted">
-          With our advanced equipment, trained professionals, and home sample collection facilities, we ensure your health diagnostics are simple, secure, and precise.
-        </p>
-        <ul class="list-unstyled text-muted mt-3">
-          <li><i class="fas fa-check-circle text-success me-2"></i> Same-day test reports</li>
-          <li><i class="fas fa-check-circle text-success me-2"></i> 100% sanitized sample collection</li>
-          <li><i class="fas fa-check-circle text-success me-2"></i> 24x7 customer support</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section class="form-wrapper">
-  <div class="container">
-    <h2 class="text-center fw-bold pt-5 mb-4">Book Your Test or Request Home Collection</h2>
-  <div class="d-flex justify-content-center my-4">
-  <div class="btn-group" role="group" aria-label="Toggle Forms">
-    <button id="btn-appointment" class="btn btn-outline-primary active" onclick="toggleForm('appointment')">Appointment</button>
-    <button id="btn-home" class="btn btn-outline-primary" onclick="toggleForm('home')">Home Collection</button>
-  </div>
-</div>
-
-
-    <!-- Appointment Form -->
-    <div id="form-appointment">
-      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
-        <form id="appointmentForm">
-          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
-          <input type="hidden" name="subject" value="Appointment Request from Rely Path Lab">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-            </div>
-            <div class="col-md-6">
-              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
-            </div>
-            <div class="col-md-6">
-              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-            </div>
-            <div class="col-md-6">
-              <input type="date" name="date" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-              <input type="time" name="time" class="form-control">
-            </div>
-            <div class="col-12">
-              <textarea name="message" class="form-control" placeholder="Optional: Describe symptoms or instructions" rows="3"></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
-            </div>
-            <p id="result1" class="text-center text-muted"></p>
-          </div>
-        </form>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Trusted Pathology at Your Doorstep</h1>
+      <p class="mt-3">
+        NABL & ISO certified lab serving clinics, hospitals, and patients with accurate diagnostics and same-day
+        reports.
+      </p>
+      <ul class="list-inline mt-4">
+        <li class="list-inline-item">✅ 30% Off on First Booking</li>
+        <li class="list-inline-item">✅ Free Home Sample Collection</li>
+      </ul>
+      <div class="mt-4">
+        <a href="#booking" class="btn btn-success btn-lg">Book a Test Now</a>
       </div>
     </div>
+  </section>
 
-    <!-- Home Collection Form -->
-    <div id="form-home" class="d-none">
-      <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
-        <form id="homeForm">
-          <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
-          <input type="hidden" name="subject" value="Home Sample Collection Request from Rely Path Lab">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+  <hr>
+  <!-- About Us Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Left: Image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img
+            src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="About Rely Path Lab" class="img-fluid rounded shadow-sm">
+        </div>
+
+        <!-- Right: Content -->
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">About Rely Path Lab</h2>
+          <p class="text-muted">
+            At Rely Path Lab, we are committed to delivering accurate and timely diagnostic solutions. NABL and ISO
+            certified, we partner with hospitals, clinics, and individuals to offer reliable pathology services.
+          </p>
+          <p class="text-muted">
+            With our advanced equipment, trained professionals, and home sample collection facilities, we ensure your
+            health diagnostics are simple, secure, and precise.
+          </p>
+          <ul class="list-unstyled text-muted mt-3">
+            <li><i class="fas fa-check-circle text-success me-2"></i> Same-day test reports</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i> 100% sanitized sample collection</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i> 24x7 customer support</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="form-wrapper" id="booking">
+    <div class="container">
+      <h2 class="text-center fw-bold pt-5 mb-4">Book Your Test or Request Home Collection</h2>
+      <div class="d-flex justify-content-center my-4">
+        <div class="btn-group" role="group" aria-label="Toggle Forms">
+          <button id="btn-appointment" class="btn btn-outline-primary active"
+            onclick="toggleForm('appointment')">Appointment</button>
+          <button id="btn-home" class="btn btn-outline-primary" onclick="toggleForm('home')">Home Collection</button>
+        </div>
+      </div>
+
+
+      <!-- Appointment Form -->
+      <div id="form-appointment">
+        <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
+          <form id="appointmentForm">
+            <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+            <input type="hidden" name="from_name" value="Rely Path Lab Online" />
+            <input type="hidden" name="subject" value="Appointment Request from Rely Path Lab">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required
+                  pattern="[0-9]{10}">
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+              </div>
+              <div class="col-md-6">
+                <input type="date" name="date" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <input type="time" name="time" class="form-control">
+              </div>
+              <div class="col-12">
+                <textarea name="message" class="form-control" placeholder="Optional: Describe symptoms or instructions"
+                  rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100">Submit Appointment</button>
+              </div>
+              <p id="result1" class="text-center text-muted"></p>
             </div>
-            <div class="col-md-6">
-              <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required pattern="[0-9]{10}">
-            </div>
-            <div class="col-12">
-              <textarea name="address" class="form-control" placeholder="Full Address with Pin Code" rows="2" required></textarea>
-            </div>
-            <div class="col-12">
-              <label><strong>Select Tests:</strong></label>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="tests[]" value="CBC" id="cbc">
-                    <label class="form-check-label" for="cbc">CBC</label>
+          </form>
+        </div>
+      </div>
+
+      <!-- Home Collection Form -->
+      <div id="form-home" class="d-none" id="homebooking">
+        <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 800px;">
+          <form id="homeForm">
+            <input type="hidden" name="access_key" value="55e40b5d-d967-4aa7-97a9-ed03ae53c809">
+            <input type="hidden" name="from_name" value="Rely Path Lab Online" />
+            <input type="hidden" name="subject" value="Home Sample Collection Request from Rely Path Lab">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" required
+                  pattern="[0-9]{10}">
+              </div>
+              <div class="col-12">
+                <textarea name="address" class="form-control" placeholder="Full Address with Pin Code" rows="2"
+                  required></textarea>
+              </div>
+              <div class="col-12">
+                <label><strong>Select Tests:</strong></label>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="tests[]" value="CBC" id="cbc">
+                      <label class="form-check-label" for="cbc">CBC</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="tests[]" value="Blood Sugar" id="sugar">
+                      <label class="form-check-label" for="sugar">Blood Sugar</label>
+                    </div>
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="tests[]" value="Blood Sugar" id="sugar">
-                    <label class="form-check-label" for="sugar">Blood Sugar</label>
+                  <div class="col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="tests[]" value="Liver Function" id="liver">
+                      <label class="form-check-label" for="liver">Liver Function</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="tests[]" value="Kidney Function"
+                        id="kidney">
+                      <label class="form-check-label" for="kidney">Kidney Function</label>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="tests[]" value="Liver Function" id="liver">
-                    <label class="form-check-label" for="liver">Liver Function</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="tests[]" value="Kidney Function" id="kidney">
-                    <label class="form-check-label" for="kidney">Kidney Function</label>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="tests[]" value="Vitamin D" id="vitd">
-                    <label class="form-check-label" for="vitd">Vitamin D</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="tests[]" value="Thyroid" id="thyroid">
-                    <label class="form-check-label" for="thyroid">Thyroid</label>
+                  <div class="col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="tests[]" value="Vitamin D" id="vitd">
+                      <label class="form-check-label" for="vitd">Vitamin D</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="tests[]" value="Thyroid" id="thyroid">
+                      <label class="form-check-label" for="thyroid">Thyroid</label>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="col-12">
+                <textarea name="message" class="form-control" placeholder="Optional: Any instructions..."
+                  rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-success w-100">Request Home Collection</button>
+              </div>
+              <p id="result2" class="text-center text-muted"></p>
             </div>
-            <div class="col-12">
-              <textarea name="message" class="form-control" placeholder="Optional: Any instructions..." rows="3"></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-success w-100">Request Home Collection</button>
-            </div>
-            <p id="result2" class="text-center text-muted"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+
+  <!-- NEW Popular Tests Section -->
+  <div class="container test-section" >
+    <h2 class="text-center mb-4">Popular Tests</h2>
+    <div class="row">
+      <!-- Left: List of Tests split into 2 columns -->
+      <div class="col-md-5">
+        <div class="row g-2">
+          <div class="col-6">
+            <ul class="test-list" id="testListLeft">
+              <li data-name="CBC" data-price="₹250"
+                data-desc="Complete Blood Count test to assess overall health and detect disorders like anemia. This test is commonly ordered during routine checkups.">
+                CBC
+              </li>
+              <li data-name="LFT" data-price="₹500"
+                data-desc="Liver Function Test for liver health monitoring and to diagnose liver diseases. Helps check enzymes, proteins, and bilirubin.">
+                LFT
+              </li>
+              <li data-name="Thyroid Profile" data-price="₹600"
+                data-desc="Thyroid hormones assessment to detect imbalances affecting metabolism. Important for diagnosing hypothyroidism or hyperthyroidism.">
+                Thyroid Profile
+              </li>
+              <li data-name="Diabetes Package" data-price="₹899"
+                data-desc="Comprehensive package to screen for diabetes and monitor glucose levels. Essential for early detection and effective management.">
+                Diabetes Package
+              </li>
+              <li data-name="Kidney Function" data-price="₹799"
+                data-desc="Evaluates kidney performance and health by checking creatinine and urea. Recommended for those with hypertension or diabetes.">
+                Kidney Function
+              </li>
+            </ul>
           </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<script>
-function toggleForm(formType) {
-  document.getElementById('form-appointment').classList.add('d-none');
-  document.getElementById('form-home').classList.add('d-none');
-  document.getElementById('btn-appointment').classList.remove('active');
-  document.getElementById('btn-home').classList.remove('active');
-
-  if (formType === 'appointment') {
-    document.getElementById('form-appointment').classList.remove('d-none');
-    document.getElementById('btn-appointment').classList.add('active');
-  } else {
-    document.getElementById('form-home').classList.remove('d-none');
-    document.getElementById('btn-home').classList.add('active');
-  }
-}
-
-  function handleWeb3Form(formId, resultId) {
-    const form = document.getElementById(formId);
-    const result = document.getElementById(resultId);
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const object = {};
-formData.forEach((value, key) => {
-  if (object[key]) {
-    if (Array.isArray(object[key])) {
-      object[key].push(value);
-    } else {
-      object[key] = [object[key], value];
-    }
-  } else {
-    object[key] = value;
-  }
-});
-
-      const json = JSON.stringify(object);
-      result.innerHTML = "Please wait...";
-
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: json
-      })
-      .then(async (response) => {
-        let json = await response.json();
-        result.innerHTML = json.message;
-        result.classList.add(response.status === 200 ? "text-success" : "text-danger");
-      })
-      .catch(() => {
-        result.innerHTML = "Something went wrong!";
-        result.classList.add("text-danger");
-      })
-      .then(() => {
-        form.reset();
-        setTimeout(() => { result.innerHTML = ""; }, 5000);
-      });
-    });
-  }
-
-  handleWeb3Form("appointmentForm", "result1");
-  handleWeb3Form("homeForm", "result2");
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<hr>
-
-
-<!-- NEW Popular Tests Section -->
-<div class="container test-section">
-  <h2 class="text-center mb-4">Popular Tests</h2>
-  <div class="row">
-    <!-- Left: List of Tests split into 2 columns -->
-    <div class="col-md-5">
-      <div class="row g-2">
-        <div class="col-6">
-          <ul class="test-list" id="testListLeft">
-            <li data-name="CBC" data-price="₹250" data-desc="Complete Blood Count test to assess overall health and detect disorders like anemia. This test is commonly ordered during routine checkups.">
-              CBC
-            </li>
-            <li data-name="LFT" data-price="₹500" data-desc="Liver Function Test for liver health monitoring and to diagnose liver diseases. Helps check enzymes, proteins, and bilirubin.">
-              LFT
-            </li>
-            <li data-name="Thyroid Profile" data-price="₹600" data-desc="Thyroid hormones assessment to detect imbalances affecting metabolism. Important for diagnosing hypothyroidism or hyperthyroidism.">
-              Thyroid Profile
-            </li>
-            <li data-name="Diabetes Package" data-price="₹899" data-desc="Comprehensive package to screen for diabetes and monitor glucose levels. Essential for early detection and effective management.">
-              Diabetes Package
-            </li>
-            <li data-name="Kidney Function" data-price="₹799" data-desc="Evaluates kidney performance and health by checking creatinine and urea. Recommended for those with hypertension or diabetes.">
-              Kidney Function
-            </li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <ul class="test-list" id="testListRight">
-            <li data-name="Vitamin D Test" data-price="₹550" data-desc="Measures Vitamin D levels to assess bone health and immune function. Useful for detecting deficiency and planning supplementation.">
-              Vitamin D Test
-            </li>
-            <li data-name="Lipid Profile" data-price="₹700" data-desc="Checks cholesterol and triglycerides to evaluate heart disease risk. Recommended as part of annual preventive health check.">
-              Lipid Profile
-            </li>
-            <li data-name="Hemoglobin A1C" data-price="₹450" data-desc="Monitors average blood sugar over past 3 months. Critical for diabetes diagnosis and ongoing management of glucose control.">
-              Hemoglobin A1C
-            </li>
-            <li data-name="Electrolytes Panel" data-price="₹650" data-desc="Analyzes sodium, potassium, and chloride levels. Helps assess fluid balance and detect dehydration or kidney issues.">
-              Electrolytes Panel
-            </li>
-            <li data-name="Iron Studies" data-price="₹500" data-desc="Evaluates iron, ferritin, and transferrin saturation. Important for diagnosing anemia and monitoring treatment response.">
-              Iron Studies
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- Right: Details -->
-    <div class="col-md-7">
-      <div class="test-details" id="testDetails">
-        <h3>Select a Test</h3>
-        <p class="price">--</p>
-        <p class="desc">Click on any test on the left to see details here.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Call-to-Action Button -->
-<div class="text-center mt-4">
-  <a href="tests.html" class="btn btn-primary btn-lg px-4 see-more-btn">
-    See More Tests & Packages <i class="fas fa-arrow-right ms-2"></i>
-  </a>
-</div>
-
-<!-- Organ-Based Tests & Packages Section -->
-<!-- <section class="py-5"> -->
-  <!-- <div class="container"> -->
-    <!-- <h2 class="text-center fw-bold mb-4">Browse Tests by Organ/System</h2> -->
-    <!-- Organ Icons -->
-    <!-- <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
-      <button class="btn btn-outline-secondary organ-btn" data-organ="All">
-        <img src="https://cdn-icons-png.flaticon.com/512/706/706830.png" alt="All" style="width:40px;height:40px;">
-        <div class="small mt-1">All</div>
-      </button>
-      <button class="btn btn-outline-secondary organ-btn" data-organ="Heart">
-        <img src="https://cdn-icons-png.flaticon.com/512/594/594655.png" alt="Heart" style="width:40px;height:40px;">
-        <div class="small mt-1">Heart</div>
-      </button>
-      <button class="btn btn-outline-secondary organ-btn" data-organ="Liver">
-        <img src="https://cdn-icons-png.flaticon.com/512/590/590685.png" alt="Liver" style="width:40px;height:40px;">
-        <div class="small mt-1">Liver</div>
-      </button>
-      <button class="btn btn-outline-secondary organ-btn" data-organ="Kidney">
-        <img src="https://cdn-icons-png.flaticon.com/512/3942/3942385.png" alt="Kidney" style="width:40px;height:40px;">
-        <div class="small mt-1">Kidney</div>
-      </button>
-      <button class="btn btn-outline-secondary organ-btn" data-organ="Thyroid">
-        <img src="https://cdn-icons-png.flaticon.com/512/4144/4144903.png" alt="Thyroid" style="width:40px;height:40px;">
-        <div class="small mt-1">Thyroid</div>
-      </button> -->
-      <!-- Add more organs as needed -->
-    <!-- </div>
-
-    <div class="row"> -->
-      <!-- Test List -->
-      <!-- <div class="col-md-6"> -->
-        <!-- <div id="testListContainer">
-          <p class="text-muted">Select an organ to see available tests.</p>
-        </div>
-      </div> -->
-
-      <!-- Test Details -->
-      <!-- <div class="col-md-6">
-        <div class="bg-light p-4 rounded shadow-sm h-100" id="organTestDetails">
-
-          <h4>Select a Test</h4>
-          <p class="price">--</p>
-          <p class="desc">Click on any test to see details here.</p>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Packages -->
-    <!-- <h3 class="mt-5 mb-3">Available Packages</h3>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="bg-white p-3 rounded shadow-sm h-100">
-          <h5 class="fw-semibold">Full Body Checkup</h5>
-          <p class="text-muted mb-2">Includes 70 tests covering liver, kidney, heart & more.</p>
-          <p class="text-success fw-bold">₹1999</p>
-          <a href="#" class="btn btn-primary btn-sm">View Details</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="bg-white p-3 rounded shadow-sm h-100">
-          <h5 class="fw-semibold">Diabetes Care Package</h5>
-          <p class="text-muted mb-2">15 tests including HbA1c, Glucose, Kidney function.</p>
-          <p class="text-success fw-bold">₹999</p>
-          <a href="#" class="btn btn-primary btn-sm">View Details</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="bg-white p-3 rounded shadow-sm h-100">
-          <h5 class="fw-semibold">Heart Health Package</h5>
-          <p class="text-muted mb-2">Cardiac enzymes, Lipid profile, ECG screening.</p>
-          <p class="text-success fw-bold">₹1499</p>
-          <a href="#" class="btn btn-primary btn-sm">View Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-
-
-<!-- Home Sample Collection -->
-<section class="py-5">
-  <div class="container">
-    <div class="position-relative rounded overflow-hidden shadow text-center" style="background: url('https://plus.unsplash.com/premium_photo-1661671898049-cf251ad91781?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;">
-      <!-- Overlay -->
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.6);"></div>
-      <!-- Content -->
-      <div class="position-relative p-4 p-md-5 text-white">
-        <h2 class="fw-bold mb-3">Book from Home – We Collect, You Relax</h2>
-        <p class="lead mb-4">
-          Schedule your sample collection conveniently and safely.
-        </p>
-        <div class="row justify-content-center">
-          <div class="col-md-10">
-            <ul class="list-unstyled mb-4 text-start d-inline-block">
-              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Free home sample collection across the city</li>
-              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Sanitized kits and WHO-standard precautions</li>
-              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Trained phlebotomists for painless collection</li>
-              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Fast turnaround: reports delivered same-day</li>
-              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Real-time updates via SMS and Email</li>
+          <div class="col-6">
+            <ul class="test-list" id="testListRight">
+              <li data-name="Vitamin D Test" data-price="₹550"
+                data-desc="Measures Vitamin D levels to assess bone health and immune function. Useful for detecting deficiency and planning supplementation.">
+                Vitamin D Test
+              </li>
+              <li data-name="Lipid Profile" data-price="₹700"
+                data-desc="Checks cholesterol and triglycerides to evaluate heart disease risk. Recommended as part of annual preventive health check.">
+                Lipid Profile
+              </li>
+              <li data-name="Hemoglobin A1C" data-price="₹450"
+                data-desc="Monitors average blood sugar over past 3 months. Critical for diabetes diagnosis and ongoing management of glucose control.">
+                Hemoglobin A1C
+              </li>
+              <li data-name="Electrolytes Panel" data-price="₹650"
+                data-desc="Analyzes sodium, potassium, and chloride levels. Helps assess fluid balance and detect dehydration or kidney issues.">
+                Electrolytes Panel
+              </li>
+              <li data-name="Iron Studies" data-price="₹500"
+                data-desc="Evaluates iron, ferritin, and transferrin saturation. Important for diagnosing anemia and monitoring treatment response.">
+                Iron Studies
+              </li>
             </ul>
           </div>
         </div>
-        <a href="#" class="btn btn-success btn-lg mt-2">Book Sample Collection Now</a>
+      </div>
+      <!-- Right: Details -->
+      <div class="col-md-7">
+        <div class="test-details" id="testDetails">
+          <h3>Select a Test</h3>
+          <p class="price">--</p>
+          <p class="desc">Click on any test on the left to see details here.</p>
+        </div>
       </div>
     </div>
   </div>
-</section>
+  <!-- Call-to-Action Button -->
+  <div class="text-center mt-4">
+    <a href="tests.html" class="btn btn-primary btn-lg px-4 see-more-btn">
+      See More Tests & Packages <i class="fas fa-arrow-right ms-2"></i>
+    </a>
+  </div>
 
 
 
-<!-- Testimonials -->
-<!-- Testimonials -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">What Our Customers Say</h2>
+  <!-- Home Sample Collection -->
+  <section class="py-5">
+    <div class="container">
+      <div class="position-relative rounded overflow-hidden shadow text-center"
+        style="background: url('https://plus.unsplash.com/premium_photo-1661671898049-cf251ad91781?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;">
+        <!-- Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.6);"></div>
+        <!-- Content -->
+        <div class="position-relative p-4 p-md-5 text-white">
+          <h2 class="fw-bold mb-3">Book from Home – We Collect, You Relax</h2>
+          <p class="lead mb-4">
+            Schedule your sample collection conveniently and safely.
+          </p>
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <ul class="list-unstyled mb-4 text-start d-inline-block">
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Free home sample collection
+                  across the city</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Sanitized kits and WHO-standard
+                  precautions</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Trained phlebotomists for
+                  painless collection</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Fast turnaround: reports
+                  delivered same-day</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Real-time updates via SMS and
+                  Email</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-success btn-lg mt-2">Book Sample Collection Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Testimonials -->
+  <!-- Testimonials -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">What Our Customers Say</h2>
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white p-4 rounded shadow-sm h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
+                style="width:50px;height:50px;font-weight:600;font-size:1.2rem;">
+                A
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0 fw-semibold">Akash Kansal</h6>
+                <small class="text-muted">2 weeks ago</small>
+              </div>
+            </div>
+            <div class="mb-2 text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-muted">
+              I went to the lab for a specific test and had a great experience. The staff were extremely supportive and
+              helpful.
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white p-4 rounded shadow-sm h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center"
+                style="width:50px;height:50px;font-weight:600;font-size:1.2rem;">
+                N
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0 fw-semibold">Namirta Sharma</h6>
+                <small class="text-muted">4 weeks ago</small>
+              </div>
+            </div>
+            <div class="mb-2 text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-muted">
+              Excellent service. The staff was professional and courteous. The facility was clean and well-maintained.
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white p-4 rounded shadow-sm h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sulaiman" class="rounded-circle"
+                style="width:50px;height:50px;object-fit:cover;">
+              <div class="ms-3">
+                <h6 class="mb-0 fw-semibold">Sulaiman Akhtar</h6>
+                <small class="text-muted">1 month ago</small>
+              </div>
+            </div>
+            <div class="mb-2 text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-muted">
+              One of the best facilities. Very professional and polite staff. Take good care and feel like premium
+              experience.
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white p-4 rounded shadow-sm h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center"
+                style="width:50px;height:50px;font-weight:600;font-size:1.2rem;">
+                R
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0 fw-semibold">Rajinder Garg</h6>
+                <small class="text-muted">last week</small>
+              </div>
+            </div>
+            <div class="mb-2 text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-muted">
+              The service was excellent. All staff were very polite and professional. Minimal wait time and smooth
+              process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Health Blog Snippets -->
+  <section class="blog-snippets container py-5">
+    <h2 class="text-center mb-4 fw-bold">Health Blogs</h2>
     <div class="row g-4">
-      <!-- Testimonial 1 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="bg-white p-4 rounded shadow-sm h-100">
-          <div class="d-flex align-items-center mb-3">
-            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width:50px;height:50px;font-weight:600;font-size:1.2rem;">
-              A
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0 fw-semibold">Akash Kansal</h6>
-              <small class="text-muted">2 weeks ago</small>
-            </div>
+
+      <!-- Blog Card 1 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+          <img src="./assets/images/blog 1 - greentea.png" class="card-img-top" style="height:180px; object-fit:cover; width:100%;" alt="Green Tea">
+          <div class="card-body text-center">
+            <h6 class="card-title">Benefits of Green Tea for Immunity</h6>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal1">Know
+              More</button>
+            <p class="small text-muted mt-3 mb-0">By: Dr. Neha Sharma</p>
+            <p class="small text-muted">03 Jul 2025</p>
           </div>
-          <div class="mb-2 text-warning">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+          <img src="./assets/images/blog 2 avacado.webp" class="card-img-top" style="height:180px; object-fit:cover; width:100%;" alt="Avocados">
+          <div class="card-body text-center">
+            <h6 class="card-title">Why Avocados Are a Heart-Healthy Choice</h6>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal2">Know
+              More</button>
+            <p class="small text-muted mt-3 mb-0">By: Dr. Alok Sinha</p>
+            <p class="small text-muted">02 Jul 2025</p>
           </div>
-          <p class="text-muted">
-            I went to the lab for a specific test and had a great experience. The staff were extremely supportive and helpful.
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+          <img src="./assets/images/blog 3 lemon water.jpeg" style="height:180px; object-fit:cover; width:100%;" class="card-img-top"
+            alt="Lemon Water">
+          <div class="card-body text-center">
+            <h6 class="card-title">Start Your Day with Warm Lemon Water</h6>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal3">Know
+              More</button>
+            <p class="small text-muted mt-3 mb-0">By: Dr. Ritu Mehra</p>
+            <p class="small text-muted">01 Jul 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+          <img src="./assets/images/blog 4 oats.webp" class="card-img-top" style="height:180px; object-fit:cover; width:100%;" alt="Oats">
+          <div class="card-body text-center">
+            <h6 class="card-title">Oats: A Superfood for Weight Management</h6>
+            <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal4">Know
+              More</button>
+            <p class="small text-muted mt-3 mb-0">By: Dr. Kavita Joshi</p>
+            <p class="small text-muted">29 Jun 2025</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Blog Modal 1 -->
+  <div class="modal fade" id="blogModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Benefits of Green Tea for Immunity</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/images/blog 1 - greentea.png"
+            class="img-fluid blog-modal-img rounded mb-3" alt="Green Tea">
+          <p>Green tea is packed with antioxidants, particularly catechins, that play a powerful role in fighting
+            infections and boosting immune response.</p>
+          <p>It can also aid in lowering inflammation and has been linked to reduced risks of heart disease and certain
+            cancers.</p>
+          <p>Starting your morning with green tea instead of coffee can provide a more stable energy lift without the
+            caffeine crash.</p>
+          <p>It’s also known to improve brain function due to the presence of L-theanine, which enhances cognitive
+            clarity.</p>
+          <p>For maximum benefit, drink freshly brewed green tea 1–2 times daily and avoid adding sugar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Modal 2 -->
+  <div class="modal fade" id="blogModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Why Avocados Are a Heart-Healthy Choice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/images/blog 2 avacado.webp"
+            class="img-fluid blog-modal-img rounded mb-3" alt="Avocados">
+          <p>Avocados are rich in monounsaturated fats that help reduce bad cholesterol (LDL) and promote heart health.
           </p>
-        </div>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="bg-white p-4 rounded shadow-sm h-100">
-          <div class="d-flex align-items-center mb-3">
-            <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center" style="width:50px;height:50px;font-weight:600;font-size:1.2rem;">
-              N
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0 fw-semibold">Namirta Sharma</h6>
-              <small class="text-muted">4 weeks ago</small>
-            </div>
-          </div>
-          <div class="mb-2 text-warning">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="text-muted">
-            Excellent service. The staff was professional and courteous. The facility was clean and well-maintained.
+          <p>They are also a great source of potassium — even more than bananas — which helps regulate blood pressure
+            naturally.</p>
+          <p>These creamy fruits are loaded with fiber, keeping you fuller for longer and aiding in weight management.
           </p>
+          <p>Adding sliced avocado to toast or salads is a simple way to boost the nutrition of any meal.</p>
+          <p>Regular consumption may also improve skin health due to the presence of vitamin E and healthy fats.</p>
         </div>
       </div>
-      <!-- Testimonial 3 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="bg-white p-4 rounded shadow-sm h-100">
-          <div class="d-flex align-items-center mb-3">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sulaiman" class="rounded-circle" style="width:50px;height:50px;object-fit:cover;">
-            <div class="ms-3">
-              <h6 class="mb-0 fw-semibold">Sulaiman Akhtar</h6>
-              <small class="text-muted">1 month ago</small>
-            </div>
-          </div>
-          <div class="mb-2 text-warning">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="text-muted">
-            One of the best facilities. Very professional and polite staff. Take good care and feel like premium experience.
+    </div>
+  </div>
+
+  <!-- Blog Modal 3 -->
+  <div class="modal fade" id="blogModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Start Your Day with Warm Lemon Water</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/images/blog 3 lemon water.jpeg"
+            class="img-fluid blog-modal-img rounded mb-3" alt="Lemon Water">
+          <p>Drinking warm lemon water in the morning helps stimulate digestion and kickstarts your metabolism for the
+            day.</p>
+          <p>It's an excellent natural source of vitamin C, which strengthens your immune system and supports skin
+            health.</p>
+          <p>Lemon water may help in maintaining the body's pH balance and reducing acidity-related problems.</p>
+          <p>It acts as a gentle detox drink and is often recommended for liver cleansing and hydration.</p>
+          <p>For best results, use freshly squeezed lemon and avoid adding sugar. A pinch of turmeric or honey can be
+            added for extra benefits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Modal 4 -->
+  <div class="modal fade" id="blogModal4" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Oats: A Superfood for Weight Management</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/images/blog 4 oats.webp" class="img-fluid blog-modal-img"
+            alt="Oats">
+          <p>Oats are a powerhouse of nutrition and an ideal breakfast choice for those trying to manage weight.</p>
+          <p>They contain soluble fiber called beta-glucan that promotes satiety and helps control appetite naturally.
           </p>
-        </div>
-      </div>
-      <!-- Testimonial 4 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="bg-white p-4 rounded shadow-sm h-100">
-          <div class="d-flex align-items-center mb-3">
-            <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width:50px;height:50px;font-weight:600;font-size:1.2rem;">
-              R
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0 fw-semibold">Rajinder Garg</h6>
-              <small class="text-muted">last week</small>
-            </div>
-          </div>
-          <div class="mb-2 text-warning">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="text-muted">
-            The service was excellent. All staff were very polite and professional. Minimal wait time and smooth process.
-          </p>
+          <p>Oats are also great for maintaining blood sugar levels, making them a good choice for diabetics.</p>
+          <p>In addition, they help lower cholesterol and improve digestive health due to their high fiber content.</p>
+          <p>Top your oats with fruits, nuts, or seeds for added flavor and nutrients — a healthy habit that can go a
+            long way!</p>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-
-<!-- Health Blog Snippets -->
-<section class="blog-snippets container py-5">
-  <h2 class="text-center mb-4 fw-bold">Health Blogs</h2>
-  <div class="row g-4">
-    
-    <!-- Blog Card 1 -->
-    <div class="col-md-3">
-      <div class="card h-100 shadow-sm border-0 rounded-4">
-        <img src="https://images.unsplash.com/photo-1608479442549-9db0a4ec36fc" class="card-img-top" alt="Green Tea">
-        <div class="card-body text-center">
-          <h6 class="card-title">Benefits of Green Tea for Immunity</h6>
-          <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal1">Know More</button>
-          <p class="small text-muted mt-3 mb-0">By: Dr. Neha Sharma</p>
-          <p class="small text-muted">03 Jul 2025</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Blog Card 2 -->
-    <div class="col-md-3">
-      <div class="card h-100 shadow-sm border-0 rounded-4">
-        <img src="https://images.unsplash.com/photo-1615484477574-25fd1b0883ba" class="card-img-top" alt="Avocados">
-        <div class="card-body text-center">
-          <h6 class="card-title">Why Avocados Are a Heart-Healthy Choice</h6>
-          <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal2">Know More</button>
-          <p class="small text-muted mt-3 mb-0">By: Dr. Alok Sinha</p>
-          <p class="small text-muted">02 Jul 2025</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Blog Card 3 -->
-    <div class="col-md-3">
-      <div class="card h-100 shadow-sm border-0 rounded-4">
-        <img src="https://images.unsplash.com/photo-1571687949920-5c3f84b5a96b" class="card-img-top" alt="Lemon Water">
-        <div class="card-body text-center">
-          <h6 class="card-title">Start Your Day with Warm Lemon Water</h6>
-          <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal3">Know More</button>
-          <p class="small text-muted mt-3 mb-0">By: Dr. Ritu Mehra</p>
-          <p class="small text-muted">01 Jul 2025</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Blog Card 4 -->
-    <div class="col-md-3">
-      <div class="card h-100 shadow-sm border-0 rounded-4">
-        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" class="card-img-top" alt="Oats">
-        <div class="card-body text-center">
-          <h6 class="card-title">Oats: A Superfood for Weight Management</h6>
-          <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#blogModal4">Know More</button>
-          <p class="small text-muted mt-3 mb-0">By: Dr. Kavita Joshi</p>
-          <p class="small text-muted">29 Jun 2025</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Blog Modal 1 -->
-<div class="modal fade" id="blogModal1" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-4">
-      <div class="modal-header">
-        <h5 class="modal-title">Benefits of Green Tea for Immunity</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://images.unsplash.com/photo-1608479442549-9db0a4ec36fc" class="img-fluid blog-modal-img rounded mb-3" alt="Green Tea">
-        <p>Green tea is packed with antioxidants, particularly catechins, that play a powerful role in fighting infections and boosting immune response.</p>
-        <p>It can also aid in lowering inflammation and has been linked to reduced risks of heart disease and certain cancers.</p>
-        <p>Starting your morning with green tea instead of coffee can provide a more stable energy lift without the caffeine crash.</p>
-        <p>It’s also known to improve brain function due to the presence of L-theanine, which enhances cognitive clarity.</p>
-        <p>For maximum benefit, drink freshly brewed green tea 1–2 times daily and avoid adding sugar.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Blog Modal 2 -->
-<div class="modal fade" id="blogModal2" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-4">
-      <div class="modal-header">
-        <h5 class="modal-title">Why Avocados Are a Heart-Healthy Choice</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://images.unsplash.com/photo-1615484477574-25fd1b0883ba" class="img-fluid blog-modal-img rounded mb-3" alt="Avocados">
-        <p>Avocados are rich in monounsaturated fats that help reduce bad cholesterol (LDL) and promote heart health.</p>
-        <p>They are also a great source of potassium — even more than bananas — which helps regulate blood pressure naturally.</p>
-        <p>These creamy fruits are loaded with fiber, keeping you fuller for longer and aiding in weight management.</p>
-        <p>Adding sliced avocado to toast or salads is a simple way to boost the nutrition of any meal.</p>
-        <p>Regular consumption may also improve skin health due to the presence of vitamin E and healthy fats.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Blog Modal 3 -->
-<div class="modal fade" id="blogModal3" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-4">
-      <div class="modal-header">
-        <h5 class="modal-title">Start Your Day with Warm Lemon Water</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://images.unsplash.com/photo-1571687949920-5c3f84b5a96b" class="img-fluid blog-modal-img rounded mb-3" alt="Lemon Water">
-        <p>Drinking warm lemon water in the morning helps stimulate digestion and kickstarts your metabolism for the day.</p>
-        <p>It's an excellent natural source of vitamin C, which strengthens your immune system and supports skin health.</p>
-        <p>Lemon water may help in maintaining the body's pH balance and reducing acidity-related problems.</p>
-        <p>It acts as a gentle detox drink and is often recommended for liver cleansing and hydration.</p>
-        <p>For best results, use freshly squeezed lemon and avoid adding sugar. A pinch of turmeric or honey can be added for extra benefits.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Blog Modal 4 -->
-<div class="modal fade" id="blogModal4" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-4">
-      <div class="modal-header">
-        <h5 class="modal-title">Oats: A Superfood for Weight Management</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" class="img-fluid blog-modal-img" alt="Oats">
-        <p>Oats are a powerhouse of nutrition and an ideal breakfast choice for those trying to manage weight.</p>
-        <p>They contain soluble fiber called beta-glucan that promotes satiety and helps control appetite naturally.</p>
-        <p>Oats are also great for maintaining blood sugar levels, making them a good choice for diabetics.</p>
-        <p>In addition, they help lower cholesterol and improve digestive health due to their high fiber content.</p>
-        <p>Top your oats with fruits, nuts, or seeds for added flavor and nutrients — a healthy habit that can go a long way!</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
   <!-- Footer -->
-  <footer class="footer mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <h5>About Us</h5>
-          <p>Rely Path Lab is NABL/ISO certified providing trusted pathology services with accurate reports at your doorstep.</p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="refund.html">Refund Policy</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5>Contact Us</h5>
-          <p><i class="fas fa-phone"></i> +91-7559258660</p>
-          <p><i class="fas fa-envelope"></i> info@relypathlab.com</p>
-          <p><i class="fas fa-map-marker-alt"></i> Nagpur, India</p>
-        </div>
+  <footer class="footer mt-5 bg-dark text-light py-4">
+  <div class="container">
+    <div class="row">
+      <!-- About Us -->
+      <div class="col-md-3 mb-3">
+        <h5>About Us</h5>
+        <p>Rely Path Lab Pvt Ltd is NABL/ISO certified, providing trusted pathology services with accurate reports at your doorstep.</p>
+        <p>
+          <strong>Address:</strong><br>
+          Medical College Road,<br>
+          70, Chandan Nagar, Hanuman Nagar,<br>
+          Nagpur, Maharashtra 440009
+        </p>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="col-md-3 mb-3">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-phone"></i> +91-8446365515</p>
+        <p><i class="fas fa-envelope"></i> relypathlabs2021@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Nagpur, India</p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 mb-3">
+        <h5>Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light">Home</a></li>
+          <li><a href="aboutus.html" class="text-light">About Us</a></li>
+          <li><a href="tests.html" class="text-light">Tests & Packages</a></li>
+          <li><a href="privacy-policy.html" class="text-light">Privacy & Policy</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <hr class="bg-secondary">
+    <div class="text-center">
+      <p>&copy; 2025 Rely Path Lab Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 
   <!-- WhatsApp Button -->
   <a href="https://wa.me/917559258660" target="_blank" class="whatsapp-float">
@@ -729,4 +666,5 @@ formData.forEach((value, key) => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>

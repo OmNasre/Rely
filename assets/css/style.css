@@ -17,11 +17,22 @@ html {
 }
 
 .glass-navbar {
-  background-color: rgba(13, 110, 253, 0.6);
+  background-color: #E8988A;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
+}
+.client-login-btn {
+
+  background-color: #a9daa9; /* Light green */
+  color: #000; /* Black text for contrast */
+  border: none;
+}
+
+.client-login-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  color: #fff; /* White text on hover */
 }
 
 
@@ -31,7 +42,7 @@ html {
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('../images/hero-bg.jpg') no-repeat center center/cover;
+              url('../images/banner.avif') no-repeat center center/cover;
   color: #fff;
   padding: 140px 0;
   text-align: center;
@@ -78,7 +89,7 @@ html {
 
 .test-list li:hover,
 .test-list li.active {
-  background: #0d6efd;
+  background: #E8988A;
   color: #fff;
   border-color: #0d6efd;
 }
@@ -122,7 +133,7 @@ html {
 }
 
 .see-more-btn:hover {
-  background-color: #084298;
+  background-color: #E8988A;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(13, 110, 253, 0.4);
 }
