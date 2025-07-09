@@ -42,11 +42,12 @@
           <li class="nav-item"><a class="nav-link text-white" href="tests.html"> Medical Tests</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="technology.html">Technology</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="aboutus.html">About Us</a></li>
-<li class="nav-item">
-          <a href="http://122.170.9.118/login.aspx" class="btn text-white client-login-btn ms-lg-3">
-            Client Login
-          </a>
-        </li>        </ul>
+          <li class="nav-item">
+            <a href="http://122.170.9.118/login.aspx" class="btn text-white client-login-btn ms-lg-3">
+              Client Login
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -56,7 +57,7 @@
   <div class="container py-4">
     <h2 class="fw-bold text-center mb-4">Exploresss Tests by Organ</h2>
     <div class="rely-organ-filter" id="organCategories">
-        
+
       <div class="rely-organ-btn active" data-organ="All">
         <img src="./assets/images/organs/all.png" alt="All">
         <div>All</div>
@@ -105,26 +106,26 @@
         <img src="./assets/images/organs/Stool.png" alt="Stool">
         <div>Stool</div>
       </div>
-            <div class="rely-organ-btn" data-organ="Tumor Markers">
+      <div class="rely-organ-btn" data-organ="Tumor Markers">
         <img src="./assets/images/organs/Tumor Markers.png" alt="Tumor Markers">
         <div>Tumor Markers</div>
       </div>
-            <div class="rely-organ-btn" data-organ="Autoimmune">
+      <div class="rely-organ-btn" data-organ="Autoimmune">
         <img src="./assets/images/organs/Autoimmune.png" alt="Autoimmune">
         <div>Autoimmune</div>
       </div>
-            <div class="rely-organ-btn" data-organ="Urine">
+      <div class="rely-organ-btn" data-organ="Urine">
         <img src="./assets/images/organs/Urine.png" alt="Urine">
         <div>Urine</div>
       </div>
-            <div class="rely-organ-btn" data-organ="Coagulation">
+      <div class="rely-organ-btn" data-organ="Coagulation">
         <img src="./assets/images/organs/Coagulation.jpeg" alt="Coagulation">
         <div>Coagulation</div>
       </div>
-         
-        <button class="scroll-btn right-btn" aria-label="Scroll Right">
-    &#9654;
-  </button>
+
+      <button class="scroll-btn right-btn" aria-label="Scroll Right">
+        &#9654;
+      </button>
     </div>
 
 
@@ -135,16 +136,16 @@
         <input type="text" class="form-control rely-test-search" placeholder="Search test..." id="testSearch">
         <div class="rely-test-list" id="testList"></div>
       </div>
-<div class="col-md-7">
-  <div class="rely-test-detail" id="testDetail">
-    <h4>Select a test to view details</h4>
-  </div>
-  <div class="d-flex justify-content-center mt-3">
-    <a href="index.html#booking">
-      <button class="btn btn-primary">Click here to book a test</button>
-    </a>
-  </div>
-</div>
+      <div class="col-md-7">
+        <div class="rely-test-detail" id="testDetail">
+          <h4>Select a test to view details</h4>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <a href="index.html#booking">
+            <button class="btn btn-primary">Click here to book a test</button>
+          </a>
+        </div>
+      </div>
 
 
     </div>
@@ -153,186 +154,187 @@
 
 
   <script>
-const testData = [
-  { name: "Thyroid Profile", price: "₹500", organ: "Thyroid", desc: "Comprehensive thyroid function screening. Helps detect hypo- or hyperthyroidism. Essential for metabolic health." },
-  { name: "TSH (Thyroid Stimulating Hormone)", price: "₹250", organ: "Thyroid", desc: "Measures TSH levels in blood. Identifies thyroid imbalance. Useful in thyroid disease monitoring." },
-  { name: "Free-Thyroid Profile (TSH, FT3, FT4)", price: "₹600", organ: "Thyroid", desc: "Complete thyroid hormone panel. Detects gland dysfunction. Guides treatment decisions." },
-  { name: "Anti-TPO", price: "₹600", organ: "Thyroid", desc: "Tests for thyroid autoantibodies. Helps diagnose autoimmune thyroiditis. Important in hypothyroidism workup." },
-  { name: "Anti-TG (ATG)", price: "₹600", organ: "Thyroid", desc: "Detects antibodies against thyroglobulin. Evaluates autoimmune thyroid disease. Assists in thyroid cancer follow-up." },
-  { name: "Thyroglobulin", price: "₹600", organ: "Thyroid", desc: "Tumor marker for thyroid cancer. Monitors post-treatment recurrence. Also used in thyroiditis diagnosis." },
-  { name: "Kidney Function Test (KFT)", price: "₹500", organ: "Kidney", desc: "Evaluates overall kidney health. Includes urea, creatinine, and more. Essential in detecting kidney disease early." },
-  { name: "Creatinine", price: "₹150", organ: "Kidney", desc: "Measures waste levels in blood. Assesses kidney filtration ability. Important for renal monitoring." },
-  { name: "Uric Acid", price: "₹150", organ: "Kidney", desc: "Screens for gout and kidney stones. High levels indicate metabolic issues. Useful in arthritis evaluation." },
-  { name: "Electrolyte", price: "₹300", organ: "Kidney", desc: "Measures sodium, potassium, chloride. Assesses hydration and balance. Critical in fluid disorder detection." },
-  { name: "Liver Function Test (LFT)", price: "₹500", organ: "Liver", desc: "Comprehensive liver enzyme panel. Detects liver damage or disease. Monitors medication side effects." },
-  { name: "Bilirubin Total/Direct", price: "₹150", organ: "Liver", desc: "Checks for jaundice and liver function. Differentiates types of jaundice. Monitors liver disease progression." },
-  { name: "SGPT", price: "₹150", organ: "Liver", desc: "Alanine transaminase enzyme test. Detects liver inflammation. Tracks hepatitis and fatty liver disease." },
-  { name: "SGOT", price: "₹150", organ: "Liver", desc: "Aspartate transaminase enzyme test. Identifies liver and heart damage. Useful in liver disease monitoring." },
-  { name: "Alkaline Phosphate", price: "₹150", organ: "Liver", desc: "Detects liver and bone disorders. Raised levels in bile duct issues. Supports diagnosis of bone diseases." },
-  { name: "Serum Proteins Total/Albumin", price: "₹150", organ: "Liver", desc: "Assesses protein production in liver. Low levels suggest liver disease. Helps monitor nutritional status." },
-  { name: "Gamma GT", price: "₹150", organ: "Liver", desc: "Enzyme marker for bile duct health. Elevated in alcohol liver disease. Supports diagnosis of liver disorders." },
-  { name: "Lipid Profile", price: "₹500", organ: "Heart", desc: "Measures cholesterol and triglycerides. Evaluates heart disease risk. Essential for cardiovascular screening." },
-  { name: "Cholesterol", price: "₹150", organ: "Heart", desc: "Measures total blood cholesterol. Key marker of heart health. Guides lipid-lowering therapy." },
-  { name: "Triglyceride", price: "₹150", organ: "Heart", desc: "Checks blood fat levels. High levels linked to heart disease. Important in metabolic syndrome screening." },
-  { name: "HDL Cholesterol", price: "₹150", organ: "Heart", desc: "Good cholesterol measurement. Higher levels protect heart. Part of lipid risk assessment." },
-  { name: "LDL Cholesterol", price: "₹150", organ: "Heart", desc: "Bad cholesterol marker. High levels raise heart risk. Key target in lipid management." },
-  { name: "Sugar (Glucose) Fasting", price: "₹50", organ: "Diabetes", desc: "Measures fasting blood sugar. Essential for diabetes diagnosis. Screens for impaired glucose tolerance." },
-  { name: "Sugar (Glucose) Post Prandial", price: "₹50", organ: "Diabetes", desc: "Measures blood sugar after meals. Detects post-meal spikes. Helps monitor diabetes control." },
-  { name: "Sugar (Glucose) Random", price: "₹50", organ: "Diabetes", desc: "Quick blood sugar check anytime. Useful in screening diabetes. Assesses glucose fluctuations." },
-  { name: "Hba1c (Whole Blood) BY HPLC", price: "₹600", organ: "Diabetes", desc: "Average sugar level over 3 months. Key in diabetes monitoring. Indicates long-term control." },
-  { name: "Insulin Fasting", price: "₹600", organ: "Diabetes", desc: "Measures fasting insulin levels. Assesses insulin resistance. Useful in metabolic disorder diagnosis." },
-  { name: "C-Peptide", price: "₹900", organ: "Diabetes", desc: "Evaluates pancreatic insulin production. Differentiates diabetes types. Helps guide insulin therapy." },
-  { name: "Follicle Stimulating Hormone (FSH)", price: "₹400", organ: "Hormones", desc: "Measures FSH in blood. Important in fertility testing. Evaluates reproductive health." },
-  { name: "Luteinizing Hormone (LH)", price: "₹400", organ: "Hormones", desc: "Measures LH levels. Assesses ovulation and fertility. Used in hormonal disorder diagnosis." },
-  { name: "Prolactin", price: "₹400", organ: "Hormones", desc: "Measures prolactin hormone. Checks pituitary function. Detects prolactinoma and menstrual issues." },
-  { name: "LH-FSH-PRL", price: "₹1000", organ: "Hormones", desc: "Combined reproductive hormone panel. Useful in infertility workup. Evaluates pituitary function." },
-  { name: "ANTI MULLERIAN HORMONE (AMH)", price: "₹2000", organ: "Hormones", desc: "Marker of ovarian reserve. Predicts fertility potential. Guides IVF treatment planning." },
-  { name: "Beta HCG", price: "₹700", organ: "Hormones", desc: "Pregnancy confirmation test. Also detects certain tumors. Useful in early pregnancy monitoring." },
-  { name: "Testosterone", price: "₹500", organ: "Hormones", desc: "Measures male hormone levels. Detects deficiency or excess. Assesses reproductive health." },
-  { name: "Progesterone", price: "₹500", organ: "Hormones", desc: "Evaluates luteal phase sufficiency. Monitors pregnancy health. Helps diagnose menstrual disorders." },
-  { name: "Estradiol/Oestrogen (E2)", price: "₹500", organ: "Hormones", desc: "Measures estrogen levels. Important in menstrual health. Assesses ovarian function." },
-  { name: "Growth Hormone", price: "₹500", organ: "Hormones", desc: "Checks for growth disorders. Used in short stature workup. Detects pituitary problems." },
-  { name: "Cortisol", price: "₹500", organ: "Hormones", desc: "Measures stress hormone levels. Evaluates adrenal gland function. Diagnoses Cushing's or Addison's." },
-  { name: "PTH-Intact (Parathyroid Hormone)", price: "₹700", organ: "Hormones", desc: "Measures parathyroid hormone. Assesses calcium metabolism. Diagnoses parathyroid disorders." },
-  { name: "WIDAL SLIDE METHOD", price: "₹200", organ: "Infection", desc: "Detects typhoid fever antibodies. Quick slide agglutination test. Aids typhoid diagnosis." },
-  { name: "WIDAL TUBE METHOD", price: "₹300", organ: "Infection", desc: "More sensitive typhoid antibody test. Quantifies antibody levels. Confirms typhoid infection." },
-  { name: "DENGUE-NS1 CARD", price: "₹400", organ: "Infection", desc: "Early detection of dengue virus. Detects NS1 antigen. Rapid diagnosis tool." },
-  { name: "DENGUE-IgG . IgM CARD", price: "₹700", organ: "Infection", desc: "Identifies dengue IgG/IgM antibodies. Confirms current or past infection. Useful in fever evaluation." },
-  { name: "DENGUE-IgG/IgM/NS1", price: "₹900", organ: "Infection", desc: "Combo dengue test. Detects early and late markers. Aids comprehensive dengue diagnosis." },
-  { name: "HIV-I&II CARD", price: "₹400", organ: "Infection", desc: "Rapid screening for HIV 1/2. Provides quick results. Used in HIV diagnosis and screening." },
-  { name: "HIV -ELISA", price: "₹500", organ: "Infection", desc: "Lab-based HIV antibody detection. Higher sensitivity than card tests. Confirms HIV status." },
-  { name: "HBsAg-Rapid CARD", price: "₹400", organ: "Infection", desc: "Screens for Hepatitis B infection. Quick and reliable. First-line hepatitis B test." },
-  { name: "HBsAg-ELISA", price: "₹500", organ: "Infection", desc: "Detailed hepatitis B test. Lab-based with high accuracy. Confirms HBsAg status." },
-  { name: "TB GOLD QUANTIFERON IGRA", price: "₹3500", organ: "Infection", desc: "Detects latent TB infection. Blood-based interferon assay. Alternative to Mantoux test." },
-  { name: "Stool Occult Blood", price: "₹250", organ: "Stool", desc: "Screens for hidden blood in stool. Detects GI bleeding. Aids colon cancer screening." },
-  // You can continue the rest similarly...
-  // Tumor Markers
-  { name: "PSA - Total", price: "₹600", organ: "Tumor Markers", desc: "Prostate-specific antigen test. Detects prostate cancer early. Useful for screening and monitoring." },
-  { name: "CA-125", price: "₹700", organ: "Tumor Markers", desc: "Tumor marker for ovarian cancer. Also raised in other conditions. Aids diagnosis and follow-up." },
-  { name: "CA 19.9", price: "₹900", organ: "Tumor Markers", desc: "Marker for pancreatic and GI cancers. Helps monitor treatment response. Supports cancer diagnosis." },
-  { name: "CA15.3", price: "₹900", organ: "Tumor Markers", desc: "Breast cancer marker in blood. Used for monitoring recurrence. Supports cancer management." },
-  { name: "ALPHA FETO PROTEIN (AFP)", price: "₹700", organ: "Tumor Markers", desc: "Marker for liver and testicular tumors. Used in prenatal screening. Guides cancer treatment decisions." },
-  { name: "CEA", price: "₹700", organ: "Tumor Markers", desc: "Carcinoembryonic antigen for colon cancer. Also raised in smokers. Monitors disease progression." },
+    const testData = [
+      { name: "Thyroid Profile", price: "₹500", organ: "Thyroid", desc: "Comprehensive thyroid function screening. Helps detect hypo- or hyperthyroidism. Essential for metabolic health." },
+      { name: "TSH (Thyroid Stimulating Hormone)", price: "₹250", organ: "Thyroid", desc: "Measures TSH levels in blood. Identifies thyroid imbalance. Useful in thyroid disease monitoring." },
+      { name: "Free-Thyroid Profile (TSH, FT3, FT4)", price: "₹600", organ: "Thyroid", desc: "Complete thyroid hormone panel. Detects gland dysfunction. Guides treatment decisions." },
+      { name: "Anti-TPO", price: "₹600", organ: "Thyroid", desc: "Tests for thyroid autoantibodies. Helps diagnose autoimmune thyroiditis. Important in hypothyroidism workup." },
+      { name: "Anti-TG (ATG)", price: "₹600", organ: "Thyroid", desc: "Detects antibodies against thyroglobulin. Evaluates autoimmune thyroid disease. Assists in thyroid cancer follow-up." },
+      { name: "Thyroglobulin", price: "₹600", organ: "Thyroid", desc: "Tumor marker for thyroid cancer. Monitors post-treatment recurrence. Also used in thyroiditis diagnosis." },
+      { name: "Kidney Function Test (KFT)", price: "₹500", organ: "Kidney", desc: "Evaluates overall kidney health. Includes urea, creatinine, and more. Essential in detecting kidney disease early." },
+      { name: "Creatinine", price: "₹150", organ: "Kidney", desc: "Measures waste levels in blood. Assesses kidney filtration ability. Important for renal monitoring." },
+      { name: "Uric Acid", price: "₹150", organ: "Kidney", desc: "Screens for gout and kidney stones. High levels indicate metabolic issues. Useful in arthritis evaluation." },
+      { name: "Electrolyte", price: "₹300", organ: "Kidney", desc: "Measures sodium, potassium, chloride. Assesses hydration and balance. Critical in fluid disorder detection." },
+      { name: "Liver Function Test (LFT)", price: "₹500", organ: "Liver", desc: "Comprehensive liver enzyme panel. Detects liver damage or disease. Monitors medication side effects." },
+      { name: "Bilirubin Total/Direct", price: "₹150", organ: "Liver", desc: "Checks for jaundice and liver function. Differentiates types of jaundice. Monitors liver disease progression." },
+      { name: "SGPT", price: "₹150", organ: "Liver", desc: "Alanine transaminase enzyme test. Detects liver inflammation. Tracks hepatitis and fatty liver disease." },
+      { name: "SGOT", price: "₹150", organ: "Liver", desc: "Aspartate transaminase enzyme test. Identifies liver and heart damage. Useful in liver disease monitoring." },
+      { name: "Alkaline Phosphate", price: "₹150", organ: "Liver", desc: "Detects liver and bone disorders. Raised levels in bile duct issues. Supports diagnosis of bone diseases." },
+      { name: "Serum Proteins Total/Albumin", price: "₹150", organ: "Liver", desc: "Assesses protein production in liver. Low levels suggest liver disease. Helps monitor nutritional status." },
+      { name: "Gamma GT", price: "₹150", organ: "Liver", desc: "Enzyme marker for bile duct health. Elevated in alcohol liver disease. Supports diagnosis of liver disorders." },
+      { name: "Lipid Profile", price: "₹500", organ: "Heart", desc: "Measures cholesterol and triglycerides. Evaluates heart disease risk. Essential for cardiovascular screening." },
+      { name: "Cholesterol", price: "₹150", organ: "Heart", desc: "Measures total blood cholesterol. Key marker of heart health. Guides lipid-lowering therapy." },
+      { name: "Triglyceride", price: "₹150", organ: "Heart", desc: "Checks blood fat levels. High levels linked to heart disease. Important in metabolic syndrome screening." },
+      { name: "HDL Cholesterol", price: "₹150", organ: "Heart", desc: "Good cholesterol measurement. Higher levels protect heart. Part of lipid risk assessment." },
+      { name: "LDL Cholesterol", price: "₹150", organ: "Heart", desc: "Bad cholesterol marker. High levels raise heart risk. Key target in lipid management." },
+      { name: "Sugar (Glucose) Fasting", price: "₹50", organ: "Diabetes", desc: "Measures fasting blood sugar. Essential for diabetes diagnosis. Screens for impaired glucose tolerance." },
+      { name: "Sugar (Glucose) Post Prandial", price: "₹50", organ: "Diabetes", desc: "Measures blood sugar after meals. Detects post-meal spikes. Helps monitor diabetes control." },
+      { name: "Sugar (Glucose) Random", price: "₹50", organ: "Diabetes", desc: "Quick blood sugar check anytime. Useful in screening diabetes. Assesses glucose fluctuations." },
+      { name: "Hba1c (Whole Blood) BY HPLC", price: "₹600", organ: "Diabetes", desc: "Average sugar level over 3 months. Key in diabetes monitoring. Indicates long-term control." },
+      { name: "Insulin Fasting", price: "₹600", organ: "Diabetes", desc: "Measures fasting insulin levels. Assesses insulin resistance. Useful in metabolic disorder diagnosis." },
+      { name: "C-Peptide", price: "₹900", organ: "Diabetes", desc: "Evaluates pancreatic insulin production. Differentiates diabetes types. Helps guide insulin therapy." },
+      { name: "Follicle Stimulating Hormone (FSH)", price: "₹400", organ: "Hormones", desc: "Measures FSH in blood. Important in fertility testing. Evaluates reproductive health." },
+      { name: "Luteinizing Hormone (LH)", price: "₹400", organ: "Hormones", desc: "Measures LH levels. Assesses ovulation and fertility. Used in hormonal disorder diagnosis." },
+      { name: "Prolactin", price: "₹400", organ: "Hormones", desc: "Measures prolactin hormone. Checks pituitary function. Detects prolactinoma and menstrual issues." },
+      { name: "LH-FSH-PRL", price: "₹1000", organ: "Hormones", desc: "Combined reproductive hormone panel. Useful in infertility workup. Evaluates pituitary function." },
+      { name: "ANTI MULLERIAN HORMONE (AMH)", price: "₹2000", organ: "Hormones", desc: "Marker of ovarian reserve. Predicts fertility potential. Guides IVF treatment planning." },
+      { name: "Beta HCG", price: "₹700", organ: "Hormones", desc: "Pregnancy confirmation test. Also detects certain tumors. Useful in early pregnancy monitoring." },
+      { name: "Testosterone", price: "₹500", organ: "Hormones", desc: "Measures male hormone levels. Detects deficiency or excess. Assesses reproductive health." },
+      { name: "Progesterone", price: "₹500", organ: "Hormones", desc: "Evaluates luteal phase sufficiency. Monitors pregnancy health. Helps diagnose menstrual disorders." },
+      { name: "Estradiol/Oestrogen (E2)", price: "₹500", organ: "Hormones", desc: "Measures estrogen levels. Important in menstrual health. Assesses ovarian function." },
+      { name: "Growth Hormone", price: "₹500", organ: "Hormones", desc: "Checks for growth disorders. Used in short stature workup. Detects pituitary problems." },
+      { name: "Cortisol", price: "₹500", organ: "Hormones", desc: "Measures stress hormone levels. Evaluates adrenal gland function. Diagnoses Cushing's or Addison's." },
+      { name: "PTH-Intact (Parathyroid Hormone)", price: "₹700", organ: "Hormones", desc: "Measures parathyroid hormone. Assesses calcium metabolism. Diagnoses parathyroid disorders." },
+      { name: "WIDAL SLIDE METHOD", price: "₹200", organ: "Infection", desc: "Detects typhoid fever antibodies. Quick slide agglutination test. Aids typhoid diagnosis." },
+      { name: "WIDAL TUBE METHOD", price: "₹300", organ: "Infection", desc: "More sensitive typhoid antibody test. Quantifies antibody levels. Confirms typhoid infection." },
+      { name: "DENGUE-NS1 CARD", price: "₹400", organ: "Infection", desc: "Early detection of dengue virus. Detects NS1 antigen. Rapid diagnosis tool." },
+      { name: "DENGUE-IgG . IgM CARD", price: "₹700", organ: "Infection", desc: "Identifies dengue IgG/IgM antibodies. Confirms current or past infection. Useful in fever evaluation." },
+      { name: "DENGUE-IgG/IgM/NS1", price: "₹900", organ: "Infection", desc: "Combo dengue test. Detects early and late markers. Aids comprehensive dengue diagnosis." },
+      { name: "HIV-I&II CARD", price: "₹400", organ: "Infection", desc: "Rapid screening for HIV 1/2. Provides quick results. Used in HIV diagnosis and screening." },
+      { name: "HIV -ELISA", price: "₹500", organ: "Infection", desc: "Lab-based HIV antibody detection. Higher sensitivity than card tests. Confirms HIV status." },
+      { name: "HBsAg-Rapid CARD", price: "₹400", organ: "Infection", desc: "Screens for Hepatitis B infection. Quick and reliable. First-line hepatitis B test." },
+      { name: "HBsAg-ELISA", price: "₹500", organ: "Infection", desc: "Detailed hepatitis B test. Lab-based with high accuracy. Confirms HBsAg status." },
+      { name: "TB GOLD QUANTIFERON IGRA", price: "₹3500", organ: "Infection", desc: "Detects latent TB infection. Blood-based interferon assay. Alternative to Mantoux test." },
+      { name: "Stool Occult Blood", price: "₹250", organ: "Stool", desc: "Screens for hidden blood in stool. Detects GI bleeding. Aids colon cancer screening." },
+      // You can continue the rest similarly...
+      // Tumor Markers
+      { name: "PSA - Total", price: "₹600", organ: "Tumor Markers", desc: "Prostate-specific antigen test. Detects prostate cancer early. Useful for screening and monitoring." },
+      { name: "CA-125", price: "₹700", organ: "Tumor Markers", desc: "Tumor marker for ovarian cancer. Also raised in other conditions. Aids diagnosis and follow-up." },
+      { name: "CA 19.9", price: "₹900", organ: "Tumor Markers", desc: "Marker for pancreatic and GI cancers. Helps monitor treatment response. Supports cancer diagnosis." },
+      { name: "CA15.3", price: "₹900", organ: "Tumor Markers", desc: "Breast cancer marker in blood. Used for monitoring recurrence. Supports cancer management." },
+      { name: "ALPHA FETO PROTEIN (AFP)", price: "₹700", organ: "Tumor Markers", desc: "Marker for liver and testicular tumors. Used in prenatal screening. Guides cancer treatment decisions." },
+      { name: "CEA", price: "₹700", organ: "Tumor Markers", desc: "Carcinoembryonic antigen for colon cancer. Also raised in smokers. Monitors disease progression." },
 
-  // Cardiac Profile
-  { name: "Lactate Dehydrogenase (LDH)", price: "₹400", organ: "Heart", desc: "Enzyme elevated in tissue damage. Used in heart attack diagnosis. Also indicates other diseases." },
-  { name: "CK-MB", price: "₹400", organ: "Heart", desc: "Cardiac marker for heart damage. Helps detect myocardial infarction. Useful in emergency settings." },
-  { name: "CPK (Total)", price: "₹300", organ: "Heart", desc: "Measures total creatine kinase. Indicates muscle injury. Helps in cardiac event diagnosis." },
-  { name: "TROPONIN I (TROPI)", price: "₹1200", organ: "Heart", desc: "Highly specific marker for heart attack. Rises within hours of damage. Critical for early detection." },
-  { name: "TROPONIN T (TROPT)", price: "₹1200", organ: "Heart", desc: "Another troponin protein marker. Confirms myocardial injury. Guides treatment decisions." },
-  { name: "D-Dimer", price: "₹1200", organ: "Coagulation", desc: "Detects blood clots and thrombosis. Elevated in DVT and PE. Important emergency diagnostic test." },
-  { name: "Homocysteine", price: "₹1400", organ: "Heart", desc: "Amino acid linked to heart disease. Elevated levels increase risk. Guides cardiovascular prevention." },
+      // Cardiac Profile
+      { name: "Lactate Dehydrogenase (LDH)", price: "₹400", organ: "Heart", desc: "Enzyme elevated in tissue damage. Used in heart attack diagnosis. Also indicates other diseases." },
+      { name: "CK-MB", price: "₹400", organ: "Heart", desc: "Cardiac marker for heart damage. Helps detect myocardial infarction. Useful in emergency settings." },
+      { name: "CPK (Total)", price: "₹300", organ: "Heart", desc: "Measures total creatine kinase. Indicates muscle injury. Helps in cardiac event diagnosis." },
+      { name: "TROPONIN I (TROPI)", price: "₹1200", organ: "Heart", desc: "Highly specific marker for heart attack. Rises within hours of damage. Critical for early detection." },
+      { name: "TROPONIN T (TROPT)", price: "₹1200", organ: "Heart", desc: "Another troponin protein marker. Confirms myocardial injury. Guides treatment decisions." },
+      { name: "D-Dimer", price: "₹1200", organ: "Coagulation", desc: "Detects blood clots and thrombosis. Elevated in DVT and PE. Important emergency diagnostic test." },
+      { name: "Homocysteine", price: "₹1400", organ: "Heart", desc: "Amino acid linked to heart disease. Elevated levels increase risk. Guides cardiovascular prevention." },
 
-  // Autoimmune
-  { name: "RA Factor", price: "₹400", organ: "Autoimmune", desc: "Rheumatoid arthritis screening test. Detects autoantibodies in blood. Supports arthritis diagnosis." },
-  { name: "Anti CCP (ACCP)", price: "₹1300", organ: "Autoimmune", desc: "Specific test for rheumatoid arthritis. More accurate than RA Factor. Confirms autoimmune disease." },
-  { name: "HLAB27", price: "₹1200", organ: "Autoimmune", desc: "Genetic marker for ankylosing spondylitis. Useful in arthritis workup. Guides rheumatologic diagnosis." },
+      // Autoimmune
+      { name: "RA Factor", price: "₹400", organ: "Autoimmune", desc: "Rheumatoid arthritis screening test. Detects autoantibodies in blood. Supports arthritis diagnosis." },
+      { name: "Anti CCP (ACCP)", price: "₹1300", organ: "Autoimmune", desc: "Specific test for rheumatoid arthritis. More accurate than RA Factor. Confirms autoimmune disease." },
+      { name: "HLAB27", price: "₹1200", organ: "Autoimmune", desc: "Genetic marker for ankylosing spondylitis. Useful in arthritis workup. Guides rheumatologic diagnosis." },
 
-  // Urine & Stool Tests
-  { name: "Urine R/M", price: "₹100", organ: "Urine", desc: "Routine urine examination. Checks cells, crystals, and infection. Basic urinary health assessment." },
-  { name: "Urine C/S", price: "₹500", organ: "Urine", desc: "Urine culture and sensitivity. Detects bacterial infection. Guides antibiotic therapy." },
-  { name: "Stool R/M", price: "₹300", organ: "Stool", desc: "Routine stool examination. Checks parasites, blood, and infection. Essential digestive health test." },
-  { name: "Stool Reducing Substance", price: "₹200", organ: "Stool", desc: "Detects carbohydrate malabsorption. Used in pediatric diarrhea cases. Guides dietary adjustments." },
-  { name: "Stool Culture", price: "₹700", organ: "Stool", desc: "Identifies bacterial pathogens. Confirms gastrointestinal infections. Determines appropriate treatment." },
+      // Urine & Stool Tests
+      { name: "Urine R/M", price: "₹100", organ: "Urine", desc: "Routine urine examination. Checks cells, crystals, and infection. Basic urinary health assessment." },
+      { name: "Urine C/S", price: "₹500", organ: "Urine", desc: "Urine culture and sensitivity. Detects bacterial infection. Guides antibiotic therapy." },
+      { name: "Stool R/M", price: "₹300", organ: "Stool", desc: "Routine stool examination. Checks parasites, blood, and infection. Essential digestive health test." },
+      { name: "Stool Reducing Substance", price: "₹200", organ: "Stool", desc: "Detects carbohydrate malabsorption. Used in pediatric diarrhea cases. Guides dietary adjustments." },
+      { name: "Stool Culture", price: "₹700", organ: "Stool", desc: "Identifies bacterial pathogens. Confirms gastrointestinal infections. Determines appropriate treatment." },
 
-  // Coagulation Profile
-  { name: "PT-INR", price: "₹400", organ: "Coagulation", desc: "Prothrombin time with INR. Monitors blood thinning therapy. Evaluates bleeding risk." },
-  { name: "APTT", price: "₹400", organ: "Coagulation", desc: "Activated partial thromboplastin time. Assesses clotting pathways. Used pre-surgery and in bleeding disorders." },
-   {
-    name: "PT-INR",
-    organ: "Coagulation",
-    price: "₹400",
-    desc: "Measures blood clotting time. Important before surgery or if on anticoagulants. Monitors bleeding disorders."
-  },
-  {
-    name: "APTT",
-    organ: "Coagulation",
-    price: "₹400",
-    desc: "Activated Partial Thromboplastin Time. Evaluates intrinsic clotting pathway. Helps diagnose bleeding issues."
-  },
-  {
-    name: "Coagulation Profile",
-    organ: "Coagulation",
-    price: "₹700",
-    desc: "Comprehensive clotting assessment including PT, APTT. Detects coagulation disorders. Guides treatment."
-  },
-  {
-    name: "D-Dimer",
-    organ: "Coagulation",
-    price: "₹1200",
-    desc: "Detects blood clots in the body. Elevated in DVT, PE. Helps rule out thrombosis."
-  },
-  {
-    name: "Vitamin B12",
-    organ: "Vitamins",
-    price: "₹700",
-    desc: "Checks Vitamin B12 levels for nerve health. Detects deficiency causing anemia. Essential for energy production."
-  },
-  {
-    name: "Vitamin D3",
-    organ: "Vitamins",
-    price: "₹1200",
-    desc: "Measures Vitamin D important for bones. Deficiency can cause weakness and pain. Supports immunity."
-  },
-  {
-    name: "Ferritin",
-    organ: "Vitamins",
-    price: "₹600",
-    desc: "Assesses iron storage in the body. Low in anemia. High in inflammation or liver disease."
-  },
-  {
-    name: "Total IGE",
-    organ: "Vitamins",
-    price: "₹600",
-    desc: "Measures total IgE antibodies. Elevated in allergies and asthma. Helps identify hypersensitivity."
-  },
-  {
-    name: "Blood Group",
-    organ: "Blood",
-    price: "₹100",
-    desc: "Determines ABO and Rh blood group. Essential before transfusions. Important in pregnancy."
-  },
-  {
-    name: "CBC - Complete Blood Count",
-    organ: "Blood",
-    price: "₹300",
-    desc: "Counts red cells, white cells, and platelets. Detects anemia, infections. General health indicator."
-  },
-  {
-    name: "CBC with PS For Opinion",
-    organ: "Blood",
-    price: "₹400",
-    desc: "CBC plus Peripheral Smear. Provides detailed view of blood cells. Helps diagnose complex conditions."
-  },
-  {
-    name: "C-REACTIVE PROTEIN (CRP)",
-    organ: "Inflammation",
-    price: "₹400",
-    desc: "Detects acute inflammation in the body. Elevated in infection or chronic disease. Monitors treatment response."
-  },
-  {
-    name: "Phosphorous",
-    organ: "Vitamins",
-    price: "₹400",
-    desc: "Checks phosphorus levels needed for bone health. Imbalance seen in kidney disease. Supports energy metabolism."
-  },
-  {
-    name: "Magnesium",
-    organ: "Vitamins",
-    price: "₹300",
-    desc: "Measures magnesium for muscle and nerve function. Low levels cause cramps and weakness. Important in metabolism."
-  },
-  {
-    name: "Calcium",
-    organ: "Vitamins",price: "₹250",desc: "Assesses calcium levels essential for bones and heart. Low or high values can indicate disease. Routine health check."
-  },
-  {name: "IRON PROFILE",organ: " Vitamins",price: "₹600",desc: "Includes serum iron and TIBC. Evaluates anemia or overload. Important in fatigue assessment."
-  },
-  {
-    name: "HB ELECTROPHORESIS (HPLC METHOD)", organ: "Blood", price: "₹900", desc: "Analyzes different hemoglobin types. Detects thalassemia and sickle cell disease. Advanced diagnostic tool."
-  }
+      // Coagulation Profile
+      { name: "PT-INR", price: "₹400", organ: "Coagulation", desc: "Prothrombin time with INR. Monitors blood thinning therapy. Evaluates bleeding risk." },
+      { name: "APTT", price: "₹400", organ: "Coagulation", desc: "Activated partial thromboplastin time. Assesses clotting pathways. Used pre-surgery and in bleeding disorders." },
+      {
+        name: "PT-INR",
+        organ: "Coagulation",
+        price: "₹400",
+        desc: "Measures blood clotting time. Important before surgery or if on anticoagulants. Monitors bleeding disorders."
+      },
+      {
+        name: "APTT",
+        organ: "Coagulation",
+        price: "₹400",
+        desc: "Activated Partial Thromboplastin Time. Evaluates intrinsic clotting pathway. Helps diagnose bleeding issues."
+      },
+      {
+        name: "Coagulation Profile",
+        organ: "Coagulation",
+        price: "₹700",
+        desc: "Comprehensive clotting assessment including PT, APTT. Detects coagulation disorders. Guides treatment."
+      },
+      {
+        name: "D-Dimer",
+        organ: "Coagulation",
+        price: "₹1200",
+        desc: "Detects blood clots in the body. Elevated in DVT, PE. Helps rule out thrombosis."
+      },
+      {
+        name: "Vitamin B12",
+        organ: "Vitamins",
+        price: "₹700",
+        desc: "Checks Vitamin B12 levels for nerve health. Detects deficiency causing anemia. Essential for energy production."
+      },
+      {
+        name: "Vitamin D3",
+        organ: "Vitamins",
+        price: "₹1200",
+        desc: "Measures Vitamin D important for bones. Deficiency can cause weakness and pain. Supports immunity."
+      },
+      {
+        name: "Ferritin",
+        organ: "Vitamins",
+        price: "₹600",
+        desc: "Assesses iron storage in the body. Low in anemia. High in inflammation or liver disease."
+      },
+      {
+        name: "Total IGE",
+        organ: "Vitamins",
+        price: "₹600",
+        desc: "Measures total IgE antibodies. Elevated in allergies and asthma. Helps identify hypersensitivity."
+      },
+      {
+        name: "Blood Group",
+        organ: "Blood",
+        price: "₹100",
+        desc: "Determines ABO and Rh blood group. Essential before transfusions. Important in pregnancy."
+      },
+      {
+        name: "CBC - Complete Blood Count",
+        organ: "Blood",
+        price: "₹300",
+        desc: "Counts red cells, white cells, and platelets. Detects anemia, infections. General health indicator."
+      },
+      {
+        name: "CBC with PS For Opinion",
+        organ: "Blood",
+        price: "₹400",
+        desc: "CBC plus Peripheral Smear. Provides detailed view of blood cells. Helps diagnose complex conditions."
+      },
+      {
+        name: "C-REACTIVE PROTEIN (CRP)",
+        organ: "Inflammation",
+        price: "₹400",
+        desc: "Detects acute inflammation in the body. Elevated in infection or chronic disease. Monitors treatment response."
+      },
+      {
+        name: "Phosphorous",
+        organ: "Vitamins",
+        price: "₹400",
+        desc: "Checks phosphorus levels needed for bone health. Imbalance seen in kidney disease. Supports energy metabolism."
+      },
+      {
+        name: "Magnesium",
+        organ: "Vitamins",
+        price: "₹300",
+        desc: "Measures magnesium for muscle and nerve function. Low levels cause cramps and weakness. Important in metabolism."
+      },
+      {
+        name: "Calcium",
+        organ: "Vitamins", price: "₹250", desc: "Assesses calcium levels essential for bones and heart. Low or high values can indicate disease. Routine health check."
+      },
+      {
+        name: "IRON PROFILE", organ: " Vitamins", price: "₹600", desc: "Includes serum iron and TIBC. Evaluates anemia or overload. Important in fatigue assessment."
+      },
+      {
+        name: "HB ELECTROPHORESIS (HPLC METHOD)", organ: "Blood", price: "₹900", desc: "Analyzes different hemoglobin types. Detects thalassemia and sickle cell disease. Advanced diagnostic tool."
+      }
 
-];
+    ];
 
 
     const categoryItems = document.querySelectorAll('.rely-organ-btn');
@@ -385,177 +387,205 @@ const testData = [
     renderTests();
   </script>
 
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="fw-bold text-center mb-4">Our Test Packages</h2>
-    <div class="row g-4">
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Our Test Packages</h2>
+      <div class="row g-4">
 
-      <!-- Fever Profile -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Fever Profile</h5>
-            <p class="text-muted">Comprehensive tests for fever and infection diagnosis</p>
-            <img src="assets/images/packges img/Fever profile pack.png" alt="Fever Profile" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFever">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white btn-primary book-now-btn" data-package="Fever Profile">Book Now</button>
+        <!-- Fever Profile -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Fever Profile</h5>
+              <p class="text-muted">Comprehensive tests for fever and infection diagnosis</p>
+              <img src="assets/images/packges img/Fever profile pack.png" alt="Fever Profile"
+                class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFever">View
+                  Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white btn-primary book-now-btn"
+                  data-package="Fever Profile">Book Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- PCOD Profile -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">PCOD Profile</h5>
-            <p class="text-muted">Hormonal assessment for PCOD management</p>
-            <img src="assets/images/packges img/pcod pack.png" alt="PCOD Profile" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packagePCOD">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="PCOD Profile" data-bs-toggle="modal" data-bs-target="#bookPCOD">Book Now</button>
+        <!-- PCOD Profile -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">PCOD Profile</h5>
+              <p class="text-muted">Hormonal assessment for PCOD management</p>
+              <img src="assets/images/packges img/pcod pack.png" alt="PCOD Profile" class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packagePCOD">View
+                  Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="PCOD Profile" data-bs-toggle="modal" data-bs-target="#bookPCOD">Book Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Arthritis Basic Screen -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Arthritis Basic Screen</h5>
-            <p class="text-muted">Key markers for arthritis diagnosis</p>
-            <img src="assets/images/packges img/arthritis pak.png" alt="Arthritis Test Banner" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageArthritis">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="Arthritis Basic Screen" data-bs-toggle="modal" data-bs-target="#bookArthritis">Book Now</button>
+        <!-- Arthritis Basic Screen -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Arthritis Basic Screen</h5>
+              <p class="text-muted">Key markers for arthritis diagnosis</p>
+              <img src="assets/images/packges img/arthritis pak.png" alt="Arthritis Test Banner"
+                class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                  data-bs-target="#packageArthritis">View Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="Arthritis Basic Screen" data-bs-toggle="modal" data-bs-target="#bookArthritis">Book
+                  Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Full Body Checkup -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Full Body Checkup (81 Tests)</h5>
-            <p class="text-muted">Extensive assessment of all health parameters</p>
-            <img src="assets/images/packges img/full body pak.png" alt="Full Body Checkup" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFullBody">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="Full Body Checkup (81 Tests)" data-bs-toggle="modal" data-bs-target="#bookFullBody">Book Now</button>
+        <!-- Full Body Checkup -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Full Body Checkup (81 Tests)</h5>
+              <p class="text-muted">Extensive assessment of all health parameters</p>
+              <img src="assets/images/packges img/full body pak.png" alt="Full Body Checkup"
+                class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                  data-bs-target="#packageFullBody">View Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="Full Body Checkup (81 Tests)" data-bs-toggle="modal" data-bs-target="#bookFullBody">Book
+                  Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Diabetes Package -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Diabetes Package</h5>
-            <p class="text-muted">Essential diabetes monitoring tests</p>
-            <img src="assets/images/packges img/diabeties pack.png" alt="Diabetes Package" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageDiabetes">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="Diabetes Package" data-bs-toggle="modal" data-bs-target="#bookDiabetes">Book Now</button>
+        <!-- Diabetes Package -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Diabetes Package</h5>
+              <p class="text-muted">Essential diabetes monitoring tests</p>
+              <img src="assets/images/packges img/diabeties pack.png" alt="Diabetes Package"
+                class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                  data-bs-target="#packageDiabetes">View Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="Diabetes Package" data-bs-toggle="modal" data-bs-target="#bookDiabetes">Book
+                  Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Basic Package -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Basic Package</h5>
-            <p class="text-muted">43 tests for primary health screening</p>
-            <img src="assets/images/packges img/basic pack.png" alt="Basic Package" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageBasic">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="Basic Package" data-bs-toggle="modal" data-bs-target="#bookBasic">Book Now</button>
+        <!-- Basic Package -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Basic Package</h5>
+              <p class="text-muted">43 tests for primary health screening</p>
+              <img src="assets/images/packges img/basic pack.png" alt="Basic Package" class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageBasic">View
+                  Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="Basic Package" data-bs-toggle="modal" data-bs-target="#bookBasic">Book Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fitness Profile -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Fitness Profile</h5>
-            <p class="text-muted">Complete wellness and fitness assessment</p>
-            <img src="assets/images/packges img/fitness profile pack.png" alt="Fitness Profile" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageFitness">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="Fitness Profile" data-bs-toggle="modal" data-bs-target="#bookFitness">Book Now</button>
+        <!-- Fitness Profile -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Fitness Profile</h5>
+              <p class="text-muted">Complete wellness and fitness assessment</p>
+              <img src="assets/images/packges img/fitness profile pack.png" alt="Fitness Profile"
+                class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                  data-bs-target="#packageFitness">View Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="Fitness Profile" data-bs-toggle="modal" data-bs-target="#bookFitness">Book Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- ANC Premium -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">ANC Premium</h5>
-            <p class="text-muted">Special tests for antenatal care</p>
-            <img src="assets/images/packges img/ANC pack.png" alt="ANC Premium" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageANC">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="ANC Premium" data-bs-toggle="modal" data-bs-target="#bookANC">Book Now</button>
+        <!-- ANC Premium -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">ANC Premium</h5>
+              <p class="text-muted">Special tests for antenatal care</p>
+              <img src="assets/images/packges img/ANC pack.png" alt="ANC Premium" class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageANC">View
+                  Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="ANC Premium" data-bs-toggle="modal" data-bs-target="#bookANC">Book Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Male Infertility Screen -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Male Infertility Screen</h5>
-            <p class="text-muted">Key hormones & indices for fertility</p>
-            <img src="assets/images/packges img/male fertility pack.png" alt="Male Infertility Screen" class="img-fluid my-3 rounded">
-            <div>
-              <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#packageMaleInfertility">View Details</button>
-              <button style="background-color: #B488AE;" class="btn text-white  book-now-btn" data-package="Male Infertility Screen" data-bs-toggle="modal" data-bs-target="#bookMaleInfertility">Book Now</button>
+        <!-- Male Infertility Screen -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Male Infertility Screen</h5>
+              <p class="text-muted">Key hormones & indices for fertility</p>
+              <img src="assets/images/packges img/male fertility pack.png" alt="Male Infertility Screen"
+                class="img-fluid my-3 rounded">
+              <div>
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                  data-bs-target="#packageMaleInfertility">View Details</button>
+                <button style="background-color: #B488AE;" class="btn text-white  book-now-btn"
+                  data-package="Male Infertility Screen" data-bs-toggle="modal"
+                  data-bs-target="#bookMaleInfertility">Book Now</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Fever Profile Modal -->
-<div class="modal fade" id="packageFever" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Fever Profile</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Add image here -->
-        <div class="text-center mb-3">
-          <img src="assets/images/packges img/Fever profile pack.png" alt="Fever Profile" class="img-fluid rounded">
+  <div class="modal fade" id="packageFever" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Fever Profile</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
-        <ul>
-          <li>Liver Function Test</li>
-          <li>C-Reactive Protein</li>
-          <li>Widal Slide Test</li>
-          <li>Dengue Profile</li>
-          <li>CBC With ESR</li>
-          <li>Malaria Antigen (PV/PF)</li>
-        </ul>
-        <p><strong>Price:</strong> <span class="text-success fw-bold">₹1799 (MRP ₹3500)</span></p>
+        <div class="modal-body">
+          <!-- Add image here -->
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/Fever profile pack.png" alt="Fever Profile" class="img-fluid rounded">
+          </div>
+          <ul>
+            <li>Liver Function Test</li>
+            <li>C-Reactive Protein</li>
+            <li>Widal Slide Test</li>
+            <li>Dengue Profile</li>
+            <li>CBC With ESR</li>
+            <li>Malaria Antigen (PV/PF)</li>
+          </ul>
+          <p><strong>Price:</strong> <span class="text-success fw-bold">₹1799 (MRP ₹3500)</span></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
@@ -569,9 +599,9 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img//pcod pack.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img//pcod pack.png" alt="Diabetes Package" class="img-fluid rounded">
+          </div>
           <ul>
             <li>Serum Testosterone</li>
             <li>DHEAS</li>
@@ -600,9 +630,9 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img/arthritis pak.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/arthritis pak.png" alt="Diabetes Package" class="img-fluid rounded">
+          </div>
           <ul>
             <li>RF</li>
             <li>ANA</li>
@@ -632,9 +662,9 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img//full body pak.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img//full body pak.png" alt="Diabetes Package" class="img-fluid rounded">
+          </div>
           <ul>
             <li>LFT</li>
             <li>KFT</li>
@@ -667,9 +697,9 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img/diabeties pack.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/diabeties pack.png" alt="Diabetes Package" class="img-fluid rounded">
+          </div>
           <ul>
             <li>LFT</li>
             <li>KFT</li>
@@ -698,9 +728,9 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img/basic pack.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/basic pack.png" alt="Diabetes Package" class="img-fluid rounded">
+          </div>
           <ul>
             <li>LFT</li>
             <li>KFT</li>
@@ -729,9 +759,10 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img/fitness profile pack.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/fitness profile pack.png" alt="Diabetes Package"
+              class="img-fluid rounded">
+          </div>
           <ul>
             <li>Complete Blood Count</li>
             <li>ESR</li>
@@ -773,9 +804,9 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img/ANC pack.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/ANC pack.png" alt="Diabetes Package" class="img-fluid rounded">
+          </div>
           <ul>
             <li>Blood Sugar - Random</li>
             <li>Sickling Test</li>
@@ -805,9 +836,10 @@ const testData = [
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-                  <div class="text-center mb-3">
-          <img src="assets/images/packges img/male fertility pack.png" alt="Diabetes Package" class="img-fluid rounded">
-        </div>
+          <div class="text-center mb-3">
+            <img src="assets/images/packges img/male fertility pack.png" alt="Diabetes Package"
+              class="img-fluid rounded">
+          </div>
           <ul>
             <li>FSH</li>
             <li>LH</li>
@@ -847,24 +879,32 @@ const testData = [
           <input type="hidden" name="from_name" value="Rely Path Lab Online" />
 
           <div class="row g-3">
-          <div class="col-md-6">
-          <label class="form-label fw-semibold">Full Name</label>
-          <input type="text" name="name" class="form-control shadow-sm" placeholder="Enter your full name" required />
-        </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Full Name</label>
+              <input type="text" name="name" class="form-control shadow-sm" placeholder="Enter your full name"
+                required />
+            </div>
             <div class="col-md-6">
               <label for="email" class="form-label fw-semibold">Email</label>
-              <input id="email" name="email" class="form-control shadow-sm" type="email" >
+              <input id="email" name="email" class="form-control shadow-sm" type="email">
             </div>
             <div class="col-md-6">
               <label for="phone" class="form-label fw-semibold">Phone</label>
               <input id="phone" name="phone" class="form-control shadow-sm" type="text" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">City</label>
+              <input list="cityList" name="city" id="cityInput" class="form-control shadow-sm" placeholder=" city"
+                required>
+              <datalist id="cityList"></datalist>
             </div>
             <div class="col-12">
               <label for="message" class="form-label fw-semibold">Message</label>
               <textarea class="form-control shadow-sm" id="message" name="message" rows="4"></textarea>
             </div>
             <div class="col-12">
-              <button style="background-color: #B488AE;" class="btn text-white w-100" type="submit">Send Message</button>
+              <button style="background-color: #B488AE;" class="btn text-white w-100" type="submit">Send
+                Message</button>
             </div>
             <p id="result3" class="text-center text-muted mt-2"></p>
           </div>
@@ -947,7 +987,7 @@ const testData = [
   </script>
 
   <!-- Footer -->
-<!-- Footer -->
+  <!-- Footer -->
   <!-- Footer -->
   <!-- Footer -->
   <footer class="footer mt-5 bg-dark text-light py-4">
@@ -1017,9 +1057,10 @@ const testData = [
 
 
   <!-- WhatsApp Button -->
-<a href="https://wa.me/917559258660?text=Hi,%20is%20home%20collection%20available%20in%20my%20area%3F%20Please%20share%20the%20details." target="_blank" class="whatsapp-float">
-  <i class="fab fa-whatsapp"></i> 
-</a>
+  <a href="https://wa.me/917559258660?text=Hi,%20is%20home%20collection%20available%20in%20my%20area%3F%20Please%20share%20the%20details."
+    target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 
   <!-- Bootstrap & Custom JS -->
